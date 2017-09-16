@@ -16,11 +16,15 @@
   
   
   
-    <meta name="description" content="函数闭包是能够读取其他函数内部变量的函数, 由于在JavaScript中, 只有函数的内部的子函数才能读取局部变量，因此可以把闭包理解为“定义在一个函数的内部的函数，所以本质上, 闭包就是将函数内部和函数外部连接起来的一座桥梁”.   如果一个函数的内部返回一个函数或者多个函数，而返回的函数中具有对自己的外层作用域中的成员的读取或者修改，那么称这个函数为闭包函数
+    <meta name="description" content="git 用于版本控制工具，方便、高效地管理代码。
 
-Quick StartCr...">
+什么是shell和vi什么是shell
+在计算机科学中，shell俗称壳，用来区别与Kernel（核），是指“提供使用者使用界面”的软件（命令解析器）。它类似于DOS下得command和后来的cmd.exe。它接收用户的命令程序，然后调用相应的应用程序。
+
+shell分类
+图形界面shell：通过提供友好的可视化界面，调用相应应用程序，如W...">
   
-  <title>函数闭包 [ Hexo ]</title>
+  <title>git [ Hexo ]</title>
   
   
     <link rel="shortcut icon" href="/favicon.ico">
@@ -39,22 +43,13 @@ Quick StartCr...">
 <body>
 <div class="side-navigate hide-area">
   
-    <div class="item prev">
-      <a href="/2017/09/16/git/">
-        <div class="item-icon"></div>
-      </a>
-      <div class="item-title">
-        git
-      </div>
-    </div>
-  
   
     <div class="item next">
-      <a href="/2017/08/25/hello-world/">
+      <a href="/2017/08/27/函数闭包/">
         <div class="item-icon"></div>
       </a>
       <div class="item-title">
-        Hello World
+        函数闭包
       </div>
     </div>
   
@@ -129,9 +124,9 @@ Quick StartCr...">
       
       
   <article id="post">
-    <h1>函数闭包</h1>
+    <h1>git</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2017-08-27</span>
+      <span id = "post-title-date">Created at 2017-09-16</span>
       
         <span id = "post-title-updated">Updated at 2017-09-16</span>
       
@@ -140,12 +135,43 @@ Quick StartCr...">
     </p>
     
     <blockquote>
-<p>   函数闭包是能够读取其他函数内部变量的函数, 由于在JavaScript中, 只有函数的内部的子函数才能读取局部变量，因此可以把闭包理解为“定义在一个函数的内部的函数，所以本质上, 闭包就是将函数内部和函数外部连接起来的一座桥梁”.<br>   如果一个函数的内部返回一个函数或者多个函数，而返回的函数中具有对自己的外层作用域中的成员的读取或者修改，那么称这个函数为<strong>闭包函数</strong></p>
+<p>git 用于版本控制工具，方便、高效地管理代码。</p>
 </blockquote>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-closuer-function-example"><a href="#Create-a-closuer-function-example" class="headerlink" title="Create a closuer function example"></a>Create a closuer function example</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</div><div class="line">	var foo = <span class="string">'bar'</span>;</div><div class="line">	var getFoo = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> foo;</div><div class="line">	&#125;</div><div class="line">	var setFoo = <span class="keyword">function</span> (val)&#123;</div><div class="line">		foo = val;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span>&#123;</div><div class="line">		getFoo: getFoo,</div><div class="line">		setFoo: setFoo</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var obj = fn();</div><div class="line">console.log(obj.getFoo);</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://www.w3school.com.cn/js/pro_js_functions_closures.asp" target="_blank" rel="external">closures from W3C</a></p>
-<h3 id="example-two"><a href="#example-two" class="headerlink" title="example two"></a>example two</h3><blockquote>
-<p>   在js中定时器永远都会在普通函数之后执行，即使延时时间为0，因为定时器的特殊性，属于异步操作，不阻碍其他程序的运行，具有延时功能。如下面的例子，for循环不会等定时器执行，直接进行下一次的循环执行</p>
+<h2 id="什么是shell和vi"><a href="#什么是shell和vi" class="headerlink" title="什么是shell和vi"></a>什么是shell和vi</h2><h3 id="什么是shell"><a href="#什么是shell" class="headerlink" title="什么是shell"></a>什么是shell</h3><blockquote>
+<p>在计算机科学中，shell俗称壳，用来区别与Kernel（核），是指“提供使用者使用界面”的软件（命令解析器）。它类似于DOS下得command和后来的cmd.exe。<strong>它接收用户的命令程序，然后调用相应的应用程序</strong>。</p>
+</blockquote>
+<h3 id="shell分类"><a href="#shell分类" class="headerlink" title="shell分类"></a>shell分类</h3><ol>
+<li>图形界面shell：<br>通过提供友好的可视化界面，调用相应应用程序，如Windows系列操作系统，Linux系统的图形化应用程序GNOME、KDE等。</li>
+<li>命令行shell：通过键盘输入特定命令的方式，调用相应的应用程序，如windows系统的cmd.exe、Windows PowerShell，Linux系统的Bourne shell(sh)、Bouune Again shell(bash)等。</li>
+</ol>
+<h3 id="认识bash这个shell"><a href="#认识bash这个shell" class="headerlink" title="认识bash这个shell"></a>认识bash这个shell</h3><blockquote>
+<p>在Windows系统下使用bash，需要一个软件，这个软件<em>模拟继承</em>了bash大部分命令。各个shell的功能都差不多，Linux默认使用bash。</p>
+</blockquote>
+<h4 id="bash命令格式"><a href="#bash命令格式" class="headerlink" title="bash命令格式"></a>bash命令格式</h4><blockquote>
+<p>命令/[-options] /[参数]，如：tar zxvf demo.tar.gz<br>查看帮助：命令 –help</p>
+</blockquote>
+<h4 id="bash常见命令"><a href="#bash常见命令" class="headerlink" title="bash常见命令"></a>bash常见命令</h4><ul>
+<li>‘pwd’(Print Working Directory)查看当前目录</li>
+<li>‘cd’(Change Directory)切换目录，如’cd /etc’</li>
+<li>‘ls’(List)查看当前目录下的内容，如’ls -al’</li>
+<li>‘mkdir’(Make Directory)创建目录，如’mkdir blog’</li>
+<li>‘touch’创建文件，如’touch index.html’</li>
+<li>‘cat’查看文件全部内容，如’cat index.html’</li>
+<li>‘less’查看文件，如’more /etc/password’、’less /etc/passwd’</li>
+<li>‘rm’(Remove)删除文件，如’rm index.html’、’rm -rf blog’,<strong>rm -rf blog这个方法要慎用，可以把非空文件夹删除，且不可恢复</strong></li>
+<li>‘rmdir’删除文件夹，<strong>只能删除空文件夹</strong>，不常用</li>
+<li>‘mv(move)’移动文件或重命名，如’mv index.html ./demo/index.html’</li>
+<li>‘cp(copy)’复制文件，’cp index.html ./demo/index.html’</li>
+<li>‘tab’自动补全，连按两次会将所有的匹配内容显示出来</li>
+<li>‘&gt;’和’&gt;&gt;’重定向，如’echo hello world!&gt;readme.md’,’&gt;’覆盖、’&gt;&gt;’追加</li>
+<li>‘|’管道符，可以将多个命令连接使用，上一次(命令)的执行结果当做下一次（命令）的执行参数。</li>
+<li>‘grep’匹配内容，一般结合管道符使用</li>
+</ul>
+<h3 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h3><blockquote>
+<p>如同window下的记事本一样，vi编辑器是Linux下的标配，通过他可以创建、编辑文件。它是一个随系统一起安装的文本编辑软件</p>
+</blockquote>
+<h4 id="三种模式"><a href="#三种模式" class="headerlink" title="三种模式"></a>三种模式</h4><blockquote>
+<p>vi编辑器提供了<strong>3种模式</strong>，分别是<strong>命令模式</strong>、<strong>插入模式</strong>、<strong>底行模式</strong>，每种模式下用户所能进行的操作是不一样的。3种模式的切换如下图所示：<br><img src="/imgs/3modalsToggle.jpg" alt="Alt 3种模式的切换"></p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (var i = 0;i &lt; 3;i++)&#123;</div><div class="line">	setTimeout(<span class="built_in">return</span> <span class="keyword">function</span>(i)&#123;</div><div class="line">		console.log(i);</div><div class="line">	&#125;,0);</div><div class="line">&#125;</div><div class="line">console.log(<span class="string">'我先显示'</span>);</div></pre></td></tr></table></figure>
 <h3 id="Sandboxing-Pattern"><a href="#Sandboxing-Pattern" class="headerlink" title="Sandboxing Pattern"></a>Sandboxing Pattern</h3><blockquote>
@@ -160,20 +186,18 @@ Quick StartCr...">
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
     <h2>Table of Content</h2>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-closuer-function-example"><span class="toc-text">Create a closuer function example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#example-two"><span class="toc-text">example two</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sandboxing-Pattern"><span class="toc-text">Sandboxing Pattern</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是shell和vi"><span class="toc-text">什么是shell和vi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是shell"><span class="toc-text">什么是shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell分类"><span class="toc-text">shell分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识bash这个shell"><span class="toc-text">认识bash这个shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令格式"><span class="toc-text">bash命令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash常见命令"><span class="toc-text">bash常见命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vi编辑器"><span class="toc-text">vi编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种模式"><span class="toc-text">三种模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sandboxing-Pattern"><span class="toc-text">Sandboxing Pattern</span></a></li></ol></li></ol>
   </div>
 </div>
 
   
 <nav id="pagination">
   
-    <a href="/2017/09/16/git/" class="prev">&larr; Prev post git</a>
-  
 
   
 
   
-    <a href="/2017/08/25/hello-world/" class="next">Next post Hello World &rarr;</a>
+    <a href="/2017/08/27/函数闭包/" class="next">Next post 函数闭包 &rarr;</a>
   
 </nav>
 
