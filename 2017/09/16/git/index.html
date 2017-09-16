@@ -126,9 +126,9 @@ shell分类
   <article id="post">
     <h1>git</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2017-09-16</span>
+      <span id = "post-title-date">撰写于 2017-09-16</span>
       
-        <span id = "post-title-updated">Updated at 2017-09-16</span>
+        <span id = "post-title-updated">修改于 2017-09-16</span>
       
       
       
@@ -173,20 +173,14 @@ shell分类
 <h4 id="三种模式"><a href="#三种模式" class="headerlink" title="三种模式"></a>三种模式</h4><blockquote>
 <p>vi编辑器提供了<strong>3种模式</strong>，分别是<strong>命令模式</strong>、<strong>插入模式</strong>、<strong>底行模式</strong>，每种模式下用户所能进行的操作是不一样的。3种模式的切换如下图所示：<br><img src="/imgs/3modalsToggle.jpg" alt="Alt 3种模式的切换"></p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (var i = 0;i &lt; 3;i++)&#123;</div><div class="line">	setTimeout(<span class="built_in">return</span> <span class="keyword">function</span>(i)&#123;</div><div class="line">		console.log(i);</div><div class="line">	&#125;,0);</div><div class="line">&#125;</div><div class="line">console.log(<span class="string">'我先显示'</span>);</div></pre></td></tr></table></figure>
-<h3 id="Sandboxing-Pattern"><a href="#Sandboxing-Pattern" class="headerlink" title="Sandboxing Pattern"></a>Sandboxing Pattern</h3><blockquote>
-<p>   沙箱模式：利用匿名函数自执行来保护内部函数成员不被外部访问或者修改</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="keyword">function</span> <span class="function"><span class="title">F</span></span>()&#123;</div><div class="line">		var age = 12;</div><div class="line">	&#125;</div><div class="line">	F.prototype.getAge = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> age;</div><div class="line">	&#125;</div><div class="line">	F.prototype.setAge = <span class="keyword">function</span>(val)&#123;</div><div class="line">		<span class="keyword">if</span>(val &lt; 18)&#123;</div><div class="line">			console.log(<span class="string">'age不能小于18'</span>);</div><div class="line">		&#125;</div><div class="line">		age = val;</div><div class="line">	&#125;</div><div class="line">	window.F = F;</div><div class="line">&#125;)()</div><div class="line">var f = new F();</div><div class="line">console.log(f.getAge());</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://blog.csdn.net/wpx_20131212/article/details/51655074" target="_blank" rel="external">from CSDN</a></p>
 
   </article>
   <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
   <div class="random-toc">
-    <h2>Table of Content</h2>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是shell和vi"><span class="toc-text">什么是shell和vi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是shell"><span class="toc-text">什么是shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell分类"><span class="toc-text">shell分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识bash这个shell"><span class="toc-text">认识bash这个shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令格式"><span class="toc-text">bash命令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash常见命令"><span class="toc-text">bash常见命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vi编辑器"><span class="toc-text">vi编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种模式"><span class="toc-text">三种模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sandboxing-Pattern"><span class="toc-text">Sandboxing Pattern</span></a></li></ol></li></ol>
+    <h2>目录</h2>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是shell和vi"><span class="toc-text">什么是shell和vi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是shell"><span class="toc-text">什么是shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell分类"><span class="toc-text">shell分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识bash这个shell"><span class="toc-text">认识bash这个shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令格式"><span class="toc-text">bash命令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash常见命令"><span class="toc-text">bash常见命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vi编辑器"><span class="toc-text">vi编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种模式"><span class="toc-text">三种模式</span></a></li></ol></li></ol></li></ol>
   </div>
 </div>
 
@@ -197,7 +191,7 @@ shell分类
   
 
   
-    <a href="/2017/08/27/函数闭包/" class="next">Next post 函数闭包 &rarr;</a>
+    <a href="/2017/08/27/函数闭包/" class="next">下一篇 函数闭包 &rarr;</a>
   
 </nav>
 
