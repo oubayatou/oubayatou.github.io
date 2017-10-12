@@ -171,7 +171,54 @@ shell分类
 <p>如同window下的记事本一样，vi编辑器是Linux下的标配，通过他可以创建、编辑文件。它是一个随系统一起安装的文本编辑软件</p>
 </blockquote>
 <h4 id="三种模式"><a href="#三种模式" class="headerlink" title="三种模式"></a>三种模式</h4><blockquote>
-<p>vi编辑器提供了<strong>3种模式</strong>，分别是<strong>命令模式</strong>、<strong>插入模式</strong>、<strong>底行模式</strong>，每种模式下用户所能进行的操作是不一样的。3种模式的切换如下图所示：<br><img src="/imgs/3modalsToggle.jpg" alt="Alt 3种模式的切换"></p>
+<p>vi编辑器提供了<strong>3种模式</strong>，分别是<strong>命令模式</strong>、<strong>插入模式</strong>、<strong>底行模式</strong>，每种模式下用户所能进行的操作是不一样的。3种模式的切换如下图所示：<br><img src="/imgs/3modalsToggle.jpg" alt="Alt 3种模式的切换"><br>从上图我们发现，输入模式不能直接切换到末行模式的，必须要先切换到命令模式（俺ESC键）</p>
+</blockquote>
+<h4 id="使用vi-vim编辑器"><a href="#使用vi-vim编辑器" class="headerlink" title="使用vi/vim编辑器"></a>使用vi/vim编辑器</h4><ul>
+<li>打开文件/创建文件， vi 文件路径</li>
+<li>底行模式：w 保存，:w filename 另存为</li>
+<li>底行模式：q 退出</li>
+<li>底行模式：wq 保存并退出</li>
+<li>底行模式：e! 撤销更改，返回上一次保存的状态</li>
+<li>底行模式：q! 不保存强制退出</li>
+<li>底行模式：set nu 设置行号</li>
+<li>命令模式：ZZ （大写）保存并退出</li>
+<li>命令模式：u 撤销操作，可多次使用</li>
+<li>命令模式：dd 删除当前行</li>
+<li>命令模式：yy 复制当前行</li>
+<li>命令模式：p 粘贴内容</li>
+<li>命令模式：ctrl+f 向前翻页</li>
+<li>命令模式：ctrl+b 向后翻页</li>
+<li>命令模式：i 进入编辑模式，当前光标出插入</li>
+<li>命令模式：a 进入编辑模式，当前光标后插入</li>
+<li>命令模式：A 进入编辑模式，光标移动行尾插入</li>
+<li>命令模式：o 进入编辑模式，当前行的下面插入</li>
+<li>命令模式：O 进入编辑模式，当前行的上面插入</li>
+</ul>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><blockquote>
+<p>SSH是一种网络协议，用于计算机之间的加密登录。SSH存在多中实现，既有商业实现，也有开源实现。本文是针对OpenSSH，它是自由软件，应用广泛。<br>如果针对Windows系统中使用SSH，会用到另一种软件PuTTY，之后用到的git客户端也集成了SSH。<br>格式：ssh user@host<br>user 代表真实存在的用户，host代表要登录的远程计算机<br>常见的有两种加密技术，分别是<strong>对称加密</strong>和<strong>非对称加密</strong>，SSH属于后者。对称加密算法在加密和解密时用到的是同一个秘钥；而非对称加密算法需要两个秘钥来进行加密和解密，这两个秘钥分别是<strong>公开秘钥</strong>（public key,简称公钥）和<strong>私有密钥</strong>（private,简称私钥）。</p>
+</blockquote>
+<ul>
+<li><p>工作原理</p>
+<blockquote>
+<p>公钥和私钥成对出现，可以通过 <strong>ssh-keygen -t rsa</strong> 来创建，既可以通过公钥来加密数据，也可以通过私钥来加密技术。如果是以公钥来加密数据，只能与之对应的私钥才可以解密，相反，如果以私钥进行数据加密，则只能与之对应的公钥才可以将数据进行解密。提高信息传递的安全性。</p>
+</blockquote>
+</li>
+<li><p>免密码登录</p>
+<blockquote>
+<p>将本地机器上的公钥保存到特定的远程计算机上，这样我们再次登录访问这台远程计算机的时候就可以免密码登录。</p>
+</blockquote>
+</li>
+<li><p>设置SSH方法：</p>
+<blockquote>
+<p>1、ssh-keygen -t rsa 创建公钥和私钥（默认在用户目录 /.ssh 目录下）<br>2、ssh-copy-id user@host 添加到对应的远程主机的用户目录 ./ssh 目录下<br>3、也可以登录远程主机，进入到用户目录 ./ssh 目录下手动创建authorized_keys 文件，并将自己的公钥粘贴如该文件。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h3><blockquote>
+<p>版本控制（Version Control Systems）是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。这个系统可以自动帮我们备份文件的每一次更改，并且可以非常方便的恢复到任意的备份（版本）状态。<br>举例：我们通常都是手动的重命名一个文件进行备份的，index.html改成index1.html或者index.html.bak等形式，然后这种方式对于单个文件我们还能够管理，但是对于整个项目而言，就会成为噩梦了！！！我们不得不借助于软件来实现。<br>实现版本控制的软件有很多种类，大致可以分为本地版本控制系统、集中式版本控制系统、分布式版本控制系统。</p>
+</blockquote>
+<h3 id="本地版本控制系统"><a href="#本地版本控制系统" class="headerlink" title="本地版本控制系统"></a>本地版本控制系统</h3><blockquote>
+<p>借助软件我们可以记录下文件的每一次修改，如下图所示，文件被修改后，记录下了3个版本，这样我们通过版本控制系统（软件）便可以非常方便的恢复到任意版本。<br><img src="/imgs/版本控制.jpg.png" alt="Alt 本地版本控制"></p>
 </blockquote>
 
   </article>
@@ -180,7 +227,7 @@ shell分类
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
   <div class="random-toc">
     <h2>目录</h2>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是shell和vi"><span class="toc-text">什么是shell和vi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是shell"><span class="toc-text">什么是shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell分类"><span class="toc-text">shell分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识bash这个shell"><span class="toc-text">认识bash这个shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令格式"><span class="toc-text">bash命令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash常见命令"><span class="toc-text">bash常见命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vi编辑器"><span class="toc-text">vi编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种模式"><span class="toc-text">三种模式</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是shell和vi"><span class="toc-text">什么是shell和vi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是shell"><span class="toc-text">什么是shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell分类"><span class="toc-text">shell分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识bash这个shell"><span class="toc-text">认识bash这个shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令格式"><span class="toc-text">bash命令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash常见命令"><span class="toc-text">bash常见命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vi编辑器"><span class="toc-text">vi编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种模式"><span class="toc-text">三种模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用vi-vim编辑器"><span class="toc-text">使用vi/vim编辑器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH"><span class="toc-text">SSH</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制"><span class="toc-text">版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于版本控制"><span class="toc-text">关于版本控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地版本控制系统"><span class="toc-text">本地版本控制系统</span></a></li></ol></li></ol>
   </div>
 </div>
 
