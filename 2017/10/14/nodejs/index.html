@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="什么是前端与后端 前端主要工作：写页面、样式、js特效、和后端的数据进行交互、借助于一些前端框架实现SPA应用； 前端主要是负责页面展示性的东西，用户所能看到的任何东西都是前端的工作；   后端主要工作：操作数据库、给前端暴露数据接口 前后端协作流程：后端为我们暴露接口、前端根据后端提供的数接口API和文档、进行页面数据的渲染  作为前端任职后的第一天工作： 在公司配置环境：自己用的顺手的编辑器、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js">
+<meta property="og:url" content="http://yoursite.com/2017/10/14/nodejs/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="什么是前端与后端 前端主要工作：写页面、样式、js特效、和后端的数据进行交互、借助于一些前端框架实现SPA应用； 前端主要是负责页面展示性的东西，用户所能看到的任何东西都是前端的工作；   后端主要工作：操作数据库、给前端暴露数据接口 前后端协作流程：后端为我们暴露接口、前端根据后端提供的数接口API和文档、进行页面数据的渲染  作为前端任职后的第一天工作： 在公司配置环境：自己用的顺手的编辑器、">
+<meta property="og:updated_time" content="2017-10-14T08:45:45.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js">
+<meta name="twitter:description" content="什么是前端与后端 前端主要工作：写页面、样式、js特效、和后端的数据进行交互、借助于一些前端框架实现SPA应用； 前端主要是负责页面展示性的东西，用户所能看到的任何东西都是前端的工作；   后端主要工作：操作数据库、给前端暴露数据接口 前后端协作流程：后端为我们暴露接口、前端根据后端提供的数接口API和文档、进行页面数据的渲染  作为前端任职后的第一天工作： 在公司配置环境：自己用的顺手的编辑器、">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/10/14/nodejs/"/>
+
+
+
+
+
+  <title>Node.js | blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/14/nodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Node.js</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-14T09:43:12+08:00">
+                2017-10-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="什么是前端与后端"><a href="#什么是前端与后端" class="headerlink" title="什么是前端与后端"></a>什么是前端与后端</h2><ol>
+<li>前端主要工作：写页面、样式、js特效、和后端的数据进行交互、借助于一些前端框架实现SPA应用；<ul>
+<li>前端主要是负责页面展示性的东西，用户所能看到的任何东西都是前端的工作；</li>
+</ul>
+</li>
+<li>后端主要工作：操作数据库、给前端暴露数据接口</li>
+<li>前后端协作流程：后端为我们暴露接口、前端根据后端提供的数接口API和<strong>文档</strong>、进行页面数据的渲染</li>
+</ol>
+<h3 id="作为前端任职后的第一天工作："><a href="#作为前端任职后的第一天工作：" class="headerlink" title="作为前端任职后的第一天工作："></a>作为前端任职后的第一天工作：</h3><ol>
+<li>在公司配置环境：自己用的顺手的编辑器、安装写Node和NPM、安装git或SVN、浏览器</li>
+<li>下载源代码</li>
+<li>三天左右熟悉项目<ul>
+<li>后端架构：java、.NET、PHP</li>
+<li>前端的架构：NG、Vue、React、Jquery+ajax+模板引擎</li>
+<li>业务：如果不熟悉，要问相关负责人</li>
+<li>技术</li>
+</ul>
+</li>
+</ol>
+<p>##Javascript的起源</p>
+<ol>
+<li>诞生：JavaScript 诞生与1995年。它当时是为了验证表单输入的验证。因为在JavaScript问世之前，表单验证是在服务器端进行的。而当时都是电话拨号上网的年代，网速只有20~30KB,服务器端验证数据是一件非常痛苦的事情。为了减少不必要的网络请求，提高网络效率，网景公司就决定自己来解决问题。<br>1995年，当时工作在Netscpe（网景公司）的布兰登（Brendar Eich）为解决类似于 “向服务器提交数据之前验证” 的问题。在Netcsape Navigator2.0 与Sun 公司联手开发一个称之为LiveScript 的脚本语言。<br>当时 java 十分流行，为了搭上 java 的顺风车，就将名字改为JavaScript。</li>
+<li>浏览器中的一站：微软发现浏览器市场很火，然后自己开发了一款浏览器—IE，为了推广自己的浏览器，就把 IE 捆绑到了windows操作系统中。Jscript<ul>
+<li>一战胜利的果实：ECMAScript 标准的确立。就是一个语言的规范，只规定了如何进行分支判断，如何进行定义变量，如何进行定义方法。。。</li>
+</ul>
+</li>
+<li>短暂的和平期：IE6【微软发现自己已经是天下无敌了，就把自己的IE6 开发团队解散了】 在和平期，JS 这梦语言主要做：表单验证，简单的特效，狗皮膏药（当时被称为脚本语言【不需要编译，直接运行时边解析边执行的语言】）</li>
+<li>二战：【主角：谷歌、IE、火狐(浴火重生的Netcsape,Mozilla借助已壮烈牺牲的Netscape遗产在2002年推出了Firefox浏览器)】谷歌在2008年，借助于Ajax，开始火起来！一方面提升渲染引擎的效率、另一方面，提升JS解析引擎的效率，最终，二战以谷歌的胜利结束，谷歌有了一款世上效率最快的JS解析引擎，叫做chrome V8 引擎；</li>
+<li>注意：谷歌的V8 引擎是用来解析执行JS代码的；</li>
+</ol>
+<h2 id="Node-js-的起源"><a href="#Node-js-的起源" class="headerlink" title="Node.js 的起源"></a>Node.js 的起源</h2><p><a href="http://blog.csdn.net/u012028371/article/details/54884056" target="_blank" rel="external">Node.js的历史由来</a></p>
+<blockquote>
+<p>作者，之前主要是做高性能服务器维护的；高性能的服务器有哪些<strong>必要的条件</strong>；必须要是<strong>异步非阻塞的</strong>、<strong>基于事件驱动的</strong>；作者在分析了上面两条基本条件之后，就开始研发高性能服务器！当时比较流行的语言有<code>C,C++</code>,<code>Java,C#</code>,<code>Javascript</code>。对于程序员来说，如果同时提供了同步和异步两种编程方式，程序员肯定会选择同步；<br>作者选择<code>Javascript</code>最主要的原因，就是这门语言是<code>单线程的</code>。多线程：程序员能主动开启子线程的语言，就叫做多线程的语言；<code>Thread td = new Thread();</code> 作者最终，选择的语言是Javascript、解析引擎是V8；免费、开源、由谷歌团队进行维护更新。刚开始，作者写出来的这个东西叫做<code>web.js</code>;后来，随着项目扩大和功能的完善，作者发现这款产品，不仅能做高性能的服务器，还能做许多事情，比如可以用这个东西去做前端包管理；于是就改名叫做<code>Node.js</code>;<br>像前端需要好用的工具，都是使用<code>node.js</code>开发出来的！</p>
+</blockquote>
+<h2 id="ECMAScript、浏览器中的Javascript、Node中的Javascript"><a href="#ECMAScript、浏览器中的Javascript、Node中的Javascript" class="headerlink" title="ECMAScript、浏览器中的Javascript、Node中的Javascript"></a>ECMAScript、浏览器中的Javascript、Node中的Javascript</h2><ul>
+<li>ECMAScript：语言规范；定义了如何定义变量、分支语句、函数、对象、内置对象；（ECMAScript语言规范就是一本书，这本书中，通过详细的规范，定义了这门语言中一些必要的特性；）</li>
+<li>浏览器中的Javascript:<ul>
+<li>浏览器中的JavaScript 组成部分：DOM + BOM + ECMAScript核心</li>
+</ul>
+</li>
+<li>Node 中的JavaScript: Node 中的JS，剔除了浏览器中扩展的DOM和BOM这两套API；在Node中，没有浏览器的概念，所以Node不需要DOM和BOM，Node中只有一个V8 JS解析引擎；<ul>
+<li>Node中的JavaScript组成部分：ECMAScript核心 + 核心API模块 + 一些第三方API模块</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>思考：为什么经常听说JS有兼容性，而很少听说Java或C#有兼容性?（解析引擎）</p>
+</blockquote>
+<h2 id="什么是Node-js"><a href="#什么是Node-js" class="headerlink" title="什么是Node.js"></a>什么是Node.js</h2><ul>
+<li><p><strong>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</strong></p>
+<ul>
+<li>我们使用JS写的Node代码，说白了，只是单纯的字符串而已；</li>
+<li>如果想要执行这些写好的代码，必须要有一个解析执行环境，这个环境就是chrome 的 V8 引擎；</li>
+</ul>
+</li>
+<li><p><strong>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</strong></p>
+<ul>
+<li>事件驱动：当触发某个事件的时候，执行事件中指定的代码！</li>
+<li>非阻塞式 I/O 的模型：采用非阻塞的操作，能够提高CPU处理的效率！代码表现形式是：会经常写回调函数。</li>
+</ul>
+</li>
+<li><p><strong>Node.js 的包管理器 npm，是全球最大的开源库生态系统。</strong></p>
+<ul>
+<li>npm由两层含义：首先它表示NPM的官网；其次，表示NPM这个包管理工具，能够方便我们从官网下载包；</li>
+<li>先使用<code>npm init -y</code>初始化一下包管理文件<code>package.json</code>，将来所有安装的包，都会记录到这个文件中</li>
+<li>使用<code>npm install 包名 --save/--save-dev</code>去安装包；其中，<code>install</code>可以简写成<code>i</code>;</li>
+<li><code>--save</code>表示把包安装到部署依赖中（在开发和部署上线都需要使用的包）； <code>--save-dev</code>表示安装到开发依赖（只在项目开发阶段需要用到的包）；</li>
+<li><code>--save</code>可以简写成<code>-S</code>；<code>--save-dev</code>可以简写成<code>-D</code>;</li>
+<li><code>npm uninstall 包名 --save/--save-dev</code>或者<code>npm remove 包名 --save/--save-dev</code></li>
+<li><code>npm i webpack -g</code>,其中，<code>-g</code>表示全局安装某些包，通过<code>-g</code>安装的包都在<code>C:\Users\用户名\AppData\Roaming\npm</code>下面</li>
+<li>使用 -g 安装的包都存放到了<code>C:\Users\自己的用户名\AppData\Roaming\npm</code>目录中；全局安装的包可以通过 cmd 命令行在任何地方使用；</li>
+<li>如果只需要安装项目运行的依赖，可以运行<code>npm i --production</code></li>
+</ul>
+</li>
+<li><p>NPM 和 （Github、码云） 和 Git之间的关系</p>
+<ul>
+<li>NPM是包管理平台（里面托管了各种各样的第三方包）</li>
+<li>Github、码云 代码托管平台（托管了各种各样的代码仓库）</li>
+<li>Git是用来对代码进行分支版本管理</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/13/跨域/" rel="next" title="跨域">
+                <i class="fa fa-chevron-left"></i> 跨域
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/25/Vue/" rel="prev" title="Vue.js">
+                Vue.js <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/S.png"
+                alt="yatou" />
+            
+              <p class="site-author-name" itemprop="name">yatou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是前端与后端"><span class="nav-number">1.</span> <span class="nav-text">什么是前端与后端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#作为前端任职后的第一天工作："><span class="nav-number">1.1.</span> <span class="nav-text">作为前端任职后的第一天工作：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js-的起源"><span class="nav-number">2.</span> <span class="nav-text">Node.js 的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ECMAScript、浏览器中的Javascript、Node中的Javascript"><span class="nav-number">3.</span> <span class="nav-text">ECMAScript、浏览器中的Javascript、Node中的Javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Node-js"><span class="nav-number">4.</span> <span class="nav-text">什么是Node.js</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yatou</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

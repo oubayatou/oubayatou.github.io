@@ -1,280 +1,2142 @@
+<!DOCTYPE html>
 
 
 
+  
 
 
-
-
-<!doctype html>
-<html lang="">
+<html class="theme-next muse use-motion" lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <meta name="author" content="John Doe">
   
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="blog">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>blog</title>
   
-  
-  
-    <meta name="description" content="">
-  
-  <title> [ Hexo ]</title>
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  
-  <link rel="stylesheet" href="/css/random.css">
-<link rel="stylesheet" href="/css/vegas.min.css">
-<link rel="stylesheet" href="/css/highlight-railscasts.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
-<link rel="stylesheet" href="/css/iconfont/iconfont.css">
-<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
-<link rel="stylesheet" href="/css/plyr.css">
-  
+
+
+
+
+
+
+
+
 </head>
 
-<div class="random-center hide-area">
-  <div id="random-index">
-    <div class="center-field">
-      <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg" width=120 height=120 onClick="openUserCard()">
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div class="center-field">
-      <div class="title" onClick="openUserCard()">Hexo</div>
-      <div class="sub-title" onClick="openUserCard()"></div>
-    </div>
-    <hr >
-    <div class="center-field">
-      <ul class="index-nav-link">
-        
-        
-          
-            <li><a href="/index.html">Home</a></li>
-          
-        
-          
-            <li><a href="/archives">Archives</a></li>
-          
-        
-          
-            <li><a href="/tags">Tags</a></li>
-          
-        
-          
-            <li><a href="/categories">Categories</a></li>
-          
-        
-          
-            <li><a href="/about">About</a></li>
-          
-        
-          
-            <li><a href="https://github.com/stiekel/hexo-theme-random">Github</a></li>
-          
-        
-      </ul>
-      <ul class="social-icon">
-  
-  
-    <li>
-      <a href="https://github.com/stiekel/hexo-theme-random">
-        
-          <i class="icon iconfont github">&#xe606;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="https://coding.net/u/Stiekel">
-        
-          <i class="icon iconfont coding">&#xe607;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="https://twitter.com/SidCN">
-        
-          <i class="icon iconfont twitter">&#xe600;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="http://weibo.com/sidcn">
-        
-          <i class="icon iconfont weibo">&#xe602;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="http://www.douban.com/people/Stiekel/">
-        
-          <i class="icon iconfont douban">&#xe60f;</i>
-        
-      </a>
-    </li>
-  
-</ul>
-    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-</div>
-<div id="user-card">
-  <div class="center-field">
-    <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg">
-    <p id="description"></p>
-    <ul class="social-icon">
-  
-  
-    <li>
-      <a href="https://github.com/stiekel/hexo-theme-random">
-        
-          <i class="icon iconfont github">&#xe606;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="https://coding.net/u/Stiekel">
-        
-          <i class="icon iconfont coding">&#xe607;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="https://twitter.com/SidCN">
-        
-          <i class="icon iconfont twitter">&#xe600;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="http://weibo.com/sidcn">
-        
-          <i class="icon iconfont weibo">&#xe602;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="http://www.douban.com/people/Stiekel/">
-        
-          <i class="icon iconfont douban">&#xe60f;</i>
-        
-      </a>
-    </li>
-  
-</ul>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
 
+<nav class="site-nav">
+  
 
-<div id="btn-view">Hide</div>
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
 
-<script>
-// is trigger analytics / tongji script
-var isIgnoreHost = false;
+      
+    </ul>
+  
 
-if(window && window.location && window.location.host) {
-  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
-    return 0 === window.location.host.indexOf(address);
-  });
-}
-
-var isTriggerAnalytics = !( true && isIgnoreHost );
-
-</script>
+  
+</nav>
 
 
 
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
 
   
   
-    <script src="/js/jquery-2.2.3.min.js"></script>
-  
-    <script src="/js/vegas.min.js"></script>
-  
-    <script src="/js/random.js"></script>
-  
-    <script src="/js/highlight.pack.js"></script>
-  
-    <script src="/js/jquery.mousewheel.pack.js"></script>
-  
-    <script src="/js/jquery.fancybox.pack.js"></script>
-  
-    <script src="/js/jquery.fancybox-thumbs.js"></script>
-  
-    <script src="/js/plyr.js"></script>
   
 
-<script>
-
-  // fancybox
-  var backgroundImages = [];
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
-  $('#post').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
-      var alt = this.alt || this.title;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'post' + i);
-    });
-  });
-  $(".fancybox").fancybox();
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/02/ES6转ES5工具babel的配置/">
 
-var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
-var unsplashConfig = {"gravity":"north"};
-// is show background images
-var turnoffBackgroundImage = false;
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/02/ES6转ES5工具babel的配置/" itemprop="url">ES6转ES5工具babel的配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-02T09:15:33+08:00">
+                2017-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>目前小伙伴们大多都在用ES5，毕竟ES5是主流，但是ES6的新特性是ES5无法比拟的。现在google浏览器已经支持ES6，但是有些低版本的浏览器不支持ES6,需要将ES6转为ES5。转换工具有很多，比如gulp、webpack、babel等，这里只介绍babel的配置</p>
+<h2 id="建立项目工程目录，编写相关的代码"><a href="#建立项目工程目录，编写相关的代码" class="headerlink" title="建立项目工程目录，编写相关的代码"></a>建立项目工程目录，编写相关的代码</h2><p>先在项目的工程目录中建立两个文件夹：src 和 dist 文件夹</p>
+<ul>
+<li>src : 书写的ES6代码的存放目录</li>
+<li>dist : ES6转换后的代码存放地，在html页面中需要引入的是这里的js文件</li>
+</ul>
+<h3 id="编写html文件"><a href="#编写html文件" class="headerlink" title="编写html文件"></a>编写html文件</h3><p>目录建好之后，在根目录建一个index.html文件，编写代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hello ES6</div></pre></td></tr></table></figure>
+<h3 id="编写index-js"><a href="#编写index-js" class="headerlink" title="编写index.js"></a>编写index.js</h3><p>在src中建一个index.js文件，编写代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const a = 2;</div><div class="line">console.log(a);</div></pre></td></tr></table></figure>
+<p>我们用了const声明，这里const是ES6的一种声明方式，接下来我们需要把这个ES6的语法文件自动编程成ES5的语法文件。</p>
+<h2 id="安装babel工具"><a href="#安装babel工具" class="headerlink" title="安装babel工具"></a>安装babel工具</h2><h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>在安装babel 之前，先初始化项目。打开终端或通过cmd的命令行的方式书写以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init -y</div></pre></td></tr></table></figure>
+<p>其中<code>npm init -y</code>与<code>npm init</code>区别是：前者不一步一步设置，直接初始化；后者需要一步一步设置。</p>
+<h3 id="安装babel-cli"><a href="#安装babel-cli" class="headerlink" title="安装babel-cli"></a>安装babel-cli</h3><p>‘-cli’ 是命令行的形式，这里采用全局安装的方式，打开终端或通过cmd的命令行的方式书写以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i babel-cli -g</div></pre></td></tr></table></figure>
+<p>接下来要安装转化包，才可以成功转换为ES5</p>
+<h3 id="本地安装babel-preset-es2015-和-babel-cli"><a href="#本地安装babel-preset-es2015-和-babel-cli" class="headerlink" title="本地安装babel-preset-es2015 和 babel-cli"></a>本地安装babel-preset-es2015 和 babel-cli</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i babel-preset-es2015 babel-cli -D</div></pre></td></tr></table></figure>
+<p>安装完成后，我们可以看一下我们的package.json文件，已经多了devDependencies选项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;devDependencies&quot;: &#123;</div><div class="line">	&quot;babel-cli&quot;: &quot;^6.26.0&quot;,</div><div class="line">    &quot;babel-preset-es2015&quot;: &quot;^6.24.1&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接下来需要建立 babelrc 配置文件</p>
+<h3 id="建立-babelrc-配置文件"><a href="#建立-babelrc-配置文件" class="headerlink" title="建立 babelrc 配置文件"></a>建立 babelrc 配置文件</h3><p>在项目根目录中新建一个babelrc 文件，编辑文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="string">"presets"</span>: [<span class="string">"es2015"</span>],</div><div class="line">	<span class="string">"plugins"</span>: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>此时我们可以在终输入命令: babel 编译源文件目录 -o 编译后文件的显示目录，端编译ES6文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">babel ./src/index.js -o ./dist/bundle.js</div></pre></td></tr></table></figure>
+<h3 id="简化操作"><a href="#简化操作" class="headerlink" title="简化操作"></a>简化操作</h3><p>我们可以在package.json 文件中编辑script节点，添加dev属性，这样可以不用每次在终端输入那么多的命令,只需输入<code>npm run dev</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;dev&quot;: &quot;babel ./src/index.js -o ./dist/bundle.js&quot;</div></pre></td></tr></table></figure>
+<p>在终端输入<code>npm run dev</code>命令，打开bundle.js文件查看结果，此时已是转化后的ES5文件</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/01/webpack的配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/01/webpack的配置/" itemprop="url">webpack的配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-01T19:15:08+08:00">
+                2017-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>网页中引入的静态资源多了以后有什么问题？？？</p>
+<ol>
+<li>网页加载速度慢， 因为 我们要发起很多的二次请求；</li>
+<li>要处理错综复杂的依赖关系<br>如何解决上述两个问题</li>
+<li>合并、压缩、精灵图、图片的Base64编码</li>
+<li>可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；</li>
+</ol>
+</blockquote>
+<h2 id="webpack-是前端的一个项目构建工具，它是基于-Node-js-开发出来的一个前端工具；"><a href="#webpack-是前端的一个项目构建工具，它是基于-Node-js-开发出来的一个前端工具；" class="headerlink" title="webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；"></a>webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；</h2><h2 id="如何完美实现上述的2种解决方案"><a href="#如何完美实现上述的2种解决方案" class="headerlink" title="如何完美实现上述的2种解决方案"></a>如何完美实现上述的2种解决方案</h2><ol>
+<li>使用Gulp， 是基于 task 任务的；</li>
+<li>使用Webpack， 是基于整个项目进行构建的；</li>
+</ol>
+<ul>
+<li>借助于webpack这个前端自动化构建工具，可以完美实现资源的合并、打包、压缩、混淆等诸多功能。</li>
+<li>根据官网的图片介绍webpack打包的过程</li>
+<li><a href="http://webpack.github.io/" target="_blank" rel="external">webpack官网</a></li>
+</ul>
+<h2 id="webpack安装的两种方式"><a href="#webpack安装的两种方式" class="headerlink" title="webpack安装的两种方式"></a>webpack安装的两种方式</h2><ol>
+<li>运行<code>npm i webpack -g</code>全局安装webpack，这样就能在全局使用webpack的命令</li>
+<li>在项目根目录中运行<code>npm i webpack --save-dev</code>安装到项目依赖中</li>
+</ol>
+<h2 id="初步使用webpack打包构建列表隔行变色案例"><a href="#初步使用webpack打包构建列表隔行变色案例" class="headerlink" title="初步使用webpack打包构建列表隔行变色案例"></a>初步使用webpack打包构建列表隔行变色案例</h2><ol>
+<li>运行<code>npm init</code>初始化项目，使用npm管理项目中的依赖包</li>
+<li>创建项目基本的目录结构</li>
+<li>使用<code>cnpm i jquery --save</code>安装jquery类库</li>
+<li>创建<code>main.js</code>并书写各行变色的代码逻辑：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//导入jQuery包</span></div><div class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> jquery</div><div class="line"><span class="comment">//设置偶数行背景色,索引是从0开始,0是偶数</span></div><div class="line">$(<span class="string">'li:even'</span>).css(<span class="string">'backgroundColor'</span>:<span class="string">'blue'</span>);</div><div class="line"><span class="comment">//设置奇数行背景色，索引从1开始</span></div><div class="line">$(<span class="string">'li:odd'</span>).css(<span class="string">'backgroundColor'</span>:<span class="string">'yellow'</span>);</div></pre></td></tr></table></figure>
+<ol>
+<li>直接运行打开index.html文件会报错，因为import是ES6语法，浏览器有兼容性问题，需要用工具将ES6转为低级语言，如webpack</li>
+<li>在控制台中输入 webpack 要转化的源入口文件路径 转换后的文件路径，对<code>main.js</code>进行处理 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack ./src/js/main.js ./dist/bundle.js</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>运行成功，打开页面看效果</p>
+<h2 id="webpack的简单配置"><a href="#webpack的简单配置" class="headerlink" title="webpack的简单配置"></a>webpack的简单配置</h2><p>对于频繁的在控制台输入‘webpack 要转化的源入口文件路径 转换后的文件路径’操作比较繁琐，可以在根目录中设置配置文件，简化操作，只需要输入‘webpack’即可。</p>
+<h3 id="配制方法"><a href="#配制方法" class="headerlink" title="配制方法"></a>配制方法</h3><ol>
+<li>在项目根目录中创建一个配置文件，名称为：webpack.config.js</li>
+<li>在文件中写如下内容：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这个配置文件其实就是一个js文件，可以通过模块向外暴露成员对象</span></div><div class="line"><span class="comment">//引入path模块</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports=&#123;</div><div class="line">	entry: path.join(__dirname+<span class="string">'./src/js/main.js'</span>),<span class="comment">//入口文件，打包那个文件</span></div><div class="line">	output:&#123;</div><div class="line">		path: path.join(__dirname,<span class="string">'./dist'</span>),<span class="comment">//指定输出的路径</span></div><div class="line">		filename: <span class="string">'bundle.js'</span><span class="comment">//指定输出的文件名</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="实现webpack的实时打包构建"><a href="#实现webpack的实时打包构建" class="headerlink" title="实现webpack的实时打包构建"></a>实现webpack的实时打包构建</h2><ol>
+<li>由于每次重新修改代码之后，都需要手动运行webpack打包的命令，比较麻烦，所以使用<code>webpack-dev-server</code>来实现代码实时打包编译，当修改代码之后，会自动进行打包构建。</li>
+<li>在控制台运行：<code>npm i webpack-dev-server -D</code>,安装到项目的开发依赖中</li>
+<li>配置webpack.config.js文件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//导入路径的模块</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="comment">//导入自动生成html的插件</span></div><div class="line"><span class="built_in">module</span>.exports=&#123;</div><div class="line">	entry: path.join(__dirname,<span class="string">'./src/js/mian.js'</span>),</div><div class="line">	output:&#123;</div><div class="line">		path:path.join(__dirname,<span class="string">'./dist'</span>),</div><div class="line">		filename:<span class="string">'bundle.js'</span></div><div class="line">	&#125;,</div><div class="line">	plugins:[<span class="comment">//添加plugins节点文件</span></div><div class="line">		<span class="keyword">new</span> htmlWebpackPlugin(&#123;</div><div class="line">			template: path.join(__dirname, <span class="string">'./src/index.html'</span>),<span class="comment">//配置模板文件</span></div><div class="line">			filename: <span class="string">'index.html'</span><span class="comment">//配置生成的html文件名</span></div><div class="line">		&#125;)</div><div class="line">	]</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>修改package.json文件的script 节点中dev属性</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;dev&quot;:&quot;webpack-dev-server&quot;</div></pre></td></tr></table></figure>
+<ol>
+<li>将index.html文件中的script 标签注释掉，因为<code>html-webpack-plugin</code> 会自动生成一个script 标签，引入在内存中的bundule.js 文件(并非在项目的物理目录中)</li>
+</ol>
+<h2 id="实现自动打开浏览器、热更新、和配置浏览器默认端口"><a href="#实现自动打开浏览器、热更新、和配置浏览器默认端口" class="headerlink" title="实现自动打开浏览器、热更新、和配置浏览器默认端口"></a>实现自动打开浏览器、热更新、和配置浏览器默认端口</h2><p><strong>注意：热更新在JS中表现的不明显，可以从一会儿要讲到的CSS身上进行介绍说明！</strong></p>
+<h3 id="方式1："><a href="#方式1：" class="headerlink" title="方式1："></a>方式1：</h3><ul>
+<li>修改<code>package.json</code>的script节点如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;dev&quot;: &quot;webpack-dev-server --open --hot --port 3000&quot;</div></pre></td></tr></table></figure>
+<p> 其中–open：自动打开浏览器，–hot：打开浏览器的热更新，–port 3000：设置端口号为3000（默认端口号8080）</p>
+<h3 id="方式2："><a href="#方式2：" class="headerlink" title="方式2："></a>方式2：</h3><ol>
+<li>修改<code>webpack.config.js</code>文件，新增devServer 节点</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">derServer:&#123;</div><div class="line">	hot: true,</div><div class="line">	open: true,</div><div class="line">	port: 3000</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>在main.js文件中引入webpack模块</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const webpack=require(&apos;webpack&apos;);</div></pre></td></tr></table></figure>
+<ol>
+<li>在plugins节点下新增：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new webpack.HotModuleReplacementPlugin()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="使用webpack打包css文件"><a href="#使用webpack打包css文件" class="headerlink" title="使用webpack打包css文件"></a>使用webpack打包css文件</h2><ol>
+<li>运行<code>npm i style-loader css-loader -D</code></li>
+<li>修改webpack.config.js 文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">module: &#123; // 用来配置第三方loader模块的</div><div class="line">       rules: [ // 文件的匹配规则</div><div class="line">           &#123; test: /\.css$/, use: [&apos;style-loader&apos;, &apos;css-loader&apos;] &#125;//处理css文件的规则</div><div class="line">       ]</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>注意：<code>use</code>表示使用哪些模块来处理<code>test</code>所匹配到的文件；<code>use</code>中相关loader模块的调用顺序是从后向前调用的；</li>
+</ol>
+<h2 id="使用webpack打包less文件"><a href="#使用webpack打包less文件" class="headerlink" title="使用webpack打包less文件"></a>使用webpack打包less文件</h2><ol>
+<li>运行<code>cnpm i less-loader less -D</code></li>
+<li>修改<code>webpack.config.js</code>这个配置文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; test: /\.less$/, use: [&apos;style-loader&apos;, &apos;css-loader&apos;, &apos;less-loader&apos;] &#125;,</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="使用webpack打包sass文件"><a href="#使用webpack打包sass文件" class="headerlink" title="使用webpack打包sass文件"></a>使用webpack打包sass文件</h2><ol>
+<li>运行<code>cnpm i sass-loader node-sass --save-dev</code></li>
+<li>在<code>webpack.config.js</code>中添加处理sass文件的loader模块：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; test: /\.scss$/, use: [&apos;style-loader&apos;, &apos;css-loader&apos;, &apos;sass-loader&apos;] &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="使用webpack处理css中的路径"><a href="#使用webpack处理css中的路径" class="headerlink" title="使用webpack处理css中的路径"></a>使用webpack处理css中的路径</h2><ol>
+<li>运行<code>cnpm i url-loader file-loader --save-dev</code></li>
+<li><p>在<code>webpack.config.js</code>中添加处理url路径的loader模块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; test: /\.(png|jpg|gif)$/, use: &apos;url-loader&apos; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过<code>limit</code>指定进行base64编码的图片大小；只有小于指定字节（byte）的图片才会进行base64编码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; test: /\.(png|jpg|gif)$/, use: &apos;url-loader?limit=43960&apos; &#125;,</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/Vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/25/Vue/" itemprop="url">Vue.js</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-25T20:02:54+08:00">
+                2017-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="什么是Vue-js"><a href="#什么是Vue-js" class="headerlink" title="什么是Vue.js"></a>什么是Vue.js</h2><ul>
+<li><p>Vue.js是目前最火的一个前端框架，React是最流行的一个前端框架（React除了开发网站，也可以用来开发手机APP，Vue也可以开发手机APP，但是需要借助于Weex）</p>
+</li>
+<li><p>Vue.js是前端的<strong>主流框架之一</strong>,和Angular.js、React.js一起成为前端的三大框架！</p>
+</li>
+<li><p>Vue.js 是一套构建用户界面的框架，<strong>只关注视图层</strong>，它不仅仅易于上手，还可以与第三方库或既有的项目进行整合。（Vue有配套的第三方库，可以配套来做大型的项目）</p>
+</li>
+</ul>
+<h2 id="为什么要学习流行框架"><a href="#为什么要学习流行框架" class="headerlink" title="为什么要学习流行框架"></a>为什么要学习流行框架</h2><ul>
+<li><p>企业为了提高开发效率：在企业中，时间就是效率，效率就是金钱；</p>
+<ul>
+<li>企业中，使用框架，能够提高开发的效率；</li>
+</ul>
+</li>
+<li><p>提高开发效率的发展历程：原生JS -&gt; Jquery之类的类库 -&gt; 前端模板引擎 -&gt; Angular.js / Vue.js（能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念【通过框架提供的指令，我们前端程序员只需要关心数据的业务逻辑，不再关心DOM是如何渲染的了】）</p>
+</li>
+<li>在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以更多的时间去关注业务逻辑；</li>
+</ul>
+<h2 id="框架和库的区别："><a href="#框架和库的区别：" class="headerlink" title="框架和库的区别："></a>框架和库的区别：</h2><ul>
+<li><p>框架：是一套完整的解决方案；对项目的侵入性较大，如果需要重新更换框架，则需要重新架构整个项目。</p>
+<ul>
+<li>例如，node中的express</li>
+</ul>
+</li>
+<li><p>库（插件）：提供某个小的功能，对项目的侵入性不大。如果某个库不能完成某个功能，可以容易的切换到另一个库中。</p>
+<ul>
+<li>例如：从jQuery到zepto</li>
+<li>例如：从EJS到art-template</li>
+</ul>
+</li>
+</ul>
+<h2 id="Node（后端）中的-MVC-与-前端中的-MVVM-的区别"><a href="#Node（后端）中的-MVC-与-前端中的-MVVM-的区别" class="headerlink" title="Node（后端）中的 MVC 与 前端中的 MVVM 的区别"></a>Node（后端）中的 MVC 与 前端中的 MVVM 的区别</h2><ul>
+<li><p>MVC 是后端的分层架构思想</p>
+</li>
+<li><p>MVVM 是前端的视图层的概念，主要关注于视图层分离，即：MVVM把前端的视图层分为三部分：Model、View、VM (viewmodel)</p>
+</li>
+<li><p>为什么有了MVC还要有MVVM</p>
+<h2 id="Vue-js-基本代码-和-MVVM-之间的对应关系"><a href="#Vue-js-基本代码-和-MVVM-之间的对应关系" class="headerlink" title="Vue.js 基本代码 和 MVVM 之间的对应关系"></a>Vue.js 基本代码 和 MVVM 之间的对应关系</h2><p><img src="/imgs/01.MVC和MVVM的关系图解.png" alt="Alt MVC 与 MVVM 的区别"></p>
+</li>
+</ul>
+<h2 id="Vue之-基本的代码结构和插值表达式、v-cloak"><a href="#Vue之-基本的代码结构和插值表达式、v-cloak" class="headerlink" title="Vue之 - 基本的代码结构和插值表达式、v-cloak"></a>Vue之 - <code>基本的代码结构</code>和<code>插值表达式</code>、<code>v-cloak</code></h2><h3 id="Vue指令之v-text和-v-html"><a href="#Vue指令之v-text和-v-html" class="headerlink" title="Vue指令之v-text和`v-html"></a>Vue指令之<code>v-text</code>和`v-html</h3><h3 id="Vue指令之v-bind的三种用法"><a href="#Vue指令之v-bind的三种用法" class="headerlink" title="Vue指令之v-bind的三种用法"></a>Vue指令之<code>v-bind</code>的三种用法</h3><ol>
+<li><p>直接使用指令<code>v-bind</code></p>
+</li>
+<li><p>使用简化指令<code>:</code></p>
+</li>
+<li><p>在绑定的时候，拼接绑定内容：<code>:title=&quot;btnTitle + &#39;, 这是追加的内容&#39;&quot;</code></p>
+</li>
+</ol>
+<h3 id="Vue指令之v-on和跑马灯效果"><a href="#Vue指令之v-on和跑马灯效果" class="headerlink" title="Vue指令之v-on和跑马灯效果"></a>Vue指令之<code>v-on</code>和<code>跑马灯效果</code></h3><h4 id="跑马灯效果"><a href="#跑马灯效果" class="headerlink" title="跑马灯效果"></a>跑马灯效果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">    &lt;p&gt;&#123;&#123;info&#125;&#125;&lt;/p&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;开启&quot; v-on:click=&quot;go&quot;&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;停止&quot; v-on:click=&quot;stop&quot;&gt;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>Vue实例：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 创建 Vue 实例，得到 ViewModel</div><div class="line"></div><div class="line">   var vm = new Vue(&#123;</div><div class="line"></div><div class="line">     el: &apos;#app&apos;,</div><div class="line"></div><div class="line">     data: &#123;</div><div class="line"></div><div class="line">       info: &apos;猥琐发育，别浪~！&apos;,</div><div class="line"></div><div class="line">       intervalId: null</div><div class="line"></div><div class="line">     &#125;,</div><div class="line"></div><div class="line">     methods: &#123;</div><div class="line"></div><div class="line">       go() &#123;</div><div class="line"></div><div class="line">         // 如果当前有定时器在运行，则直接return</div><div class="line"></div><div class="line">         if (this.intervalId != null) &#123;</div><div class="line"></div><div class="line">           return;</div><div class="line"></div><div class="line">         &#125;</div><div class="line"></div><div class="line">         // 开始定时器</div><div class="line"></div><div class="line">         this.intervalId = setInterval(() =&gt; &#123;</div><div class="line"></div><div class="line">           this.info = this.info.substring(1) + this.info.substring(0, 1);</div><div class="line"></div><div class="line">         &#125;, 500);</div><div class="line"></div><div class="line">       &#125;,</div><div class="line"></div><div class="line">       stop() &#123;</div><div class="line"></div><div class="line">         clearInterval(this.intervalId);</div><div class="line"></div><div class="line">       &#125;</div><div class="line"></div><div class="line">     &#125;</div><div class="line"></div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<h3 id="Vue指令之v-on的缩写和事件修饰符"><a href="#Vue指令之v-on的缩写和事件修饰符" class="headerlink" title="Vue指令之v-on的缩写和事件修饰符"></a>Vue指令之<code>v-on的缩写</code>和<code>事件修饰符</code></h3><h4 id="事件修饰符："><a href="#事件修饰符：" class="headerlink" title="事件修饰符："></a>事件修饰符：</h4><ul>
+<li><p>.stop       阻止冒泡</p>
+</li>
+<li><p>.prevent    阻止默认事件</p>
+</li>
+<li><p>.capture    添加事件侦听器时使用事件捕获模式</p>
+</li>
+<li><p>.self       只当事件在该元素本身（比如不是子元素）触发时触发回调</p>
+</li>
+<li><p>.once       事件只触发一次</p>
+</li>
+</ul>
+<h3 id="Vue指令之v-model和双向数据绑定"><a href="#Vue指令之v-model和双向数据绑定" class="headerlink" title="Vue指令之v-model和双向数据绑定"></a>Vue指令之<code>v-model</code>和<code>双向数据绑定</code></h3><h4 id="简易计算器案例"><a href="#简易计算器案例" class="headerlink" title="简易计算器案例"></a>简易计算器案例</h4><ol>
+<li>HTML 代码结构</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">  &lt;input type=&quot;text&quot; v-model=&quot;n1&quot;&gt;</div><div class="line"></div><div class="line">  &lt;select v-model=&quot;opt&quot;&gt;</div><div class="line"></div><div class="line">    &lt;option value=&quot;0&quot;&gt;+&lt;/option&gt;</div><div class="line"></div><div class="line">    &lt;option value=&quot;1&quot;&gt;-&lt;/option&gt;</div><div class="line"></div><div class="line">    &lt;option value=&quot;2&quot;&gt;*&lt;/option&gt;</div><div class="line"></div><div class="line">    &lt;option value=&quot;3&quot;&gt;÷&lt;/option&gt;</div><div class="line"></div><div class="line">  &lt;/select&gt;</div><div class="line"></div><div class="line">  &lt;input type=&quot;text&quot; v-model=&quot;n2&quot;&gt;</div><div class="line"></div><div class="line">  &lt;input type=&quot;button&quot; value=&quot;=&quot; v-on:click=&quot;getResult&quot;&gt;</div><div class="line"></div><div class="line">  &lt;input type=&quot;text&quot; v-model=&quot;result&quot;&gt;</div><div class="line"></div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>Vue实例代码：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 创建 Vue 实例，得到 ViewModel</div><div class="line"></div><div class="line">   var vm = new Vue(&#123;</div><div class="line"></div><div class="line">     el: &apos;#app&apos;,</div><div class="line"></div><div class="line">     data: &#123;</div><div class="line"></div><div class="line">       n1: 0,</div><div class="line"></div><div class="line">       n2: 0,</div><div class="line"></div><div class="line">       result: 0,</div><div class="line"></div><div class="line">       opt: &apos;0&apos;</div><div class="line"></div><div class="line">     &#125;,</div><div class="line"></div><div class="line">     methods: &#123;</div><div class="line"></div><div class="line">       getResult() &#123;</div><div class="line"></div><div class="line">         switch (this.opt) &#123;</div><div class="line"></div><div class="line">           case &apos;0&apos;:</div><div class="line"></div><div class="line">             this.result = parseInt(this.n1) + parseInt(this.n2);</div><div class="line"></div><div class="line">             break;</div><div class="line"></div><div class="line">           case &apos;1&apos;:</div><div class="line"></div><div class="line">             this.result = parseInt(this.n1) - parseInt(this.n2);</div><div class="line"></div><div class="line">             break;</div><div class="line"></div><div class="line">           case &apos;2&apos;:</div><div class="line"></div><div class="line">             this.result = parseInt(this.n1) * parseInt(this.n2);</div><div class="line"></div><div class="line">             break;</div><div class="line"></div><div class="line">           case &apos;3&apos;:</div><div class="line"></div><div class="line">             this.result = parseInt(this.n1) / parseInt(this.n2);</div><div class="line"></div><div class="line">             break;</div><div class="line"></div><div class="line">         &#125;</div><div class="line"></div><div class="line">       &#125;</div><div class="line"></div><div class="line">     &#125;</div><div class="line"></div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<h3 id="在Vue中使用样式"><a href="#在Vue中使用样式" class="headerlink" title="在Vue中使用样式"></a>在Vue中使用样式</h3><h4 id="使用class样式"><a href="#使用class样式" class="headerlink" title="使用class样式"></a>使用class样式</h4><ol>
+<li><p>数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :class=&quot;[&apos;red&apos;, &apos;thin&apos;]&quot;&gt;这是一个邪恶的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>数组中使用三元表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :class=&quot;[&apos;red&apos;, &apos;thin&apos;, isactive?&apos;active&apos;:&apos;&apos;]&quot;&gt;这是一个邪恶的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>数组中嵌套对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :class=&quot;[&apos;red&apos;, &apos;thin&apos;, &#123;&apos;active&apos;: isactive&#125;]&quot;&gt;这是一个邪恶的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>直接使用对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :class=&quot;&#123;red:true, italic:true, active:true, thin:true&#125;&quot;&gt;这是一个邪恶的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="使用内联样式"><a href="#使用内联样式" class="headerlink" title="使用内联样式"></a>使用内联样式</h4><ol>
+<li><p>直接在元素上通过 <code>:style</code> 的形式，书写样式对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :style=&quot;&#123;color: &apos;red&apos;, &apos;font-size&apos;: &apos;40px&apos;&#125;&quot;&gt;这是一个善良的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>将样式对象，定义到 <code>data</code> 中，并直接引用到 <code>:style</code> 中</p>
+<ul>
+<li><p>在data上定义样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">        h1StyleObj: &#123; color: &apos;red&apos;, &apos;font-size&apos;: &apos;40px&apos;, &apos;font-weight&apos;: &apos;200&apos; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在元素中，通过属性绑定的形式，将样式对象应用到元素中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :style=&quot;h1StyleObj&quot;&gt;这是一个善良的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在 <code>:style</code> 中通过数组，引用多个 <code>data</code> 上的样式对象</p>
+<ul>
+<li><p>在data上定义样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">        h1StyleObj: &#123; color: &apos;red&apos;, &apos;font-size&apos;: &apos;40px&apos;, &apos;font-weight&apos;: &apos;200&apos; &#125;,</div><div class="line">        h1StyleObj2: &#123; fontStyle: &apos;italic&apos; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在元素中，通过属性绑定的形式，将样式对象应用到元素中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 :style=&quot;[h1StyleObj, h1StyleObj2]&quot;&gt;这是一个善良的H1&lt;/h1&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Vue指令之v-for和key属性"><a href="#Vue指令之v-for和key属性" class="headerlink" title="Vue指令之v-for和key属性"></a>Vue指令之<code>v-for</code>和<code>key</code>属性</h3><ol>
+<li>迭代数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">  &lt;li v-for=&quot;(item, i) in list&quot;&gt;索引：&#123;&#123;i&#125;&#125; --- 姓名：&#123;&#123;item.name&#125;&#125; --- 年龄：&#123;&#123;item.age&#125;&#125;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>迭代对象中的属性</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 循环遍历对象身上的属性 --&gt;</div><div class="line"></div><div class="line">   &lt;div v-for=&quot;(val, key, i) in userInfo&quot;&gt;&#123;&#123;val&#125;&#125; --- &#123;&#123;key&#125;&#125; --- &#123;&#123;i&#125;&#125;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>迭代数字</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p v-for=&quot;i in 10&quot;&gt;这是第 &#123;&#123;i&#125;&#125; 个P标签&lt;/p&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>2.2.0+ 的版本里，<strong>当在组件中使用</strong> v-for 时，key 现在是必须的。<br>当 Vue.js 用 v-for 正在更新已渲染过的元素列表时，它默认用 “<strong>就地复用</strong>” 策略。如果数据项的顺序被改变，Vue将<strong>不是移动 DOM 元素来匹配数据项的顺序</strong>， 而是<strong>简单复用此处每个元素</strong>，并且确保它在特定索引下显示已被渲染过的每个元素。为了给 Vue 一个提示，<strong>以便它能跟踪每个节点的身份，从而重用和重新排序现有元素</strong>，你需要为每项提供一个唯一 key 属性。</p>
+</blockquote>
+<h3 id="Vue指令之v-if和v-show"><a href="#Vue指令之v-if和v-show" class="headerlink" title="Vue指令之v-if和v-show"></a>Vue指令之<code>v-if</code>和<code>v-show</code></h3><blockquote>
+<p>一般来说，v-if 有更高的切换消耗而 v-show 有更高的初始渲染消耗。因此，如果需要频繁切换 v-show 较好，如果在运行时条件不大可能改变 v-if 较好。</p>
+</blockquote>
+<h3 id="品牌管理案例"><a href="#品牌管理案例" class="headerlink" title="品牌管理案例"></a>品牌管理案例</h3><h4 id="添加新品牌"><a href="#添加新品牌" class="headerlink" title="添加新品牌"></a>添加新品牌</h4><h4 id="删除品牌"><a href="#删除品牌" class="headerlink" title="删除品牌"></a>删除品牌</h4><h4 id="根据条件筛选品牌"><a href="#根据条件筛选品牌" class="headerlink" title="根据条件筛选品牌"></a>根据条件筛选品牌</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/14/nodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/14/nodejs/" itemprop="url">Node.js</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-14T09:43:12+08:00">
+                2017-10-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="什么是前端与后端"><a href="#什么是前端与后端" class="headerlink" title="什么是前端与后端"></a>什么是前端与后端</h2><ol>
+<li>前端主要工作：写页面、样式、js特效、和后端的数据进行交互、借助于一些前端框架实现SPA应用；<ul>
+<li>前端主要是负责页面展示性的东西，用户所能看到的任何东西都是前端的工作；</li>
+</ul>
+</li>
+<li>后端主要工作：操作数据库、给前端暴露数据接口</li>
+<li>前后端协作流程：后端为我们暴露接口、前端根据后端提供的数接口API和<strong>文档</strong>、进行页面数据的渲染</li>
+</ol>
+<h3 id="作为前端任职后的第一天工作："><a href="#作为前端任职后的第一天工作：" class="headerlink" title="作为前端任职后的第一天工作："></a>作为前端任职后的第一天工作：</h3><ol>
+<li>在公司配置环境：自己用的顺手的编辑器、安装写Node和NPM、安装git或SVN、浏览器</li>
+<li>下载源代码</li>
+<li>三天左右熟悉项目<ul>
+<li>后端架构：java、.NET、PHP</li>
+<li>前端的架构：NG、Vue、React、Jquery+ajax+模板引擎</li>
+<li>业务：如果不熟悉，要问相关负责人</li>
+<li>技术</li>
+</ul>
+</li>
+</ol>
+<p>##Javascript的起源</p>
+<ol>
+<li>诞生：JavaScript 诞生与1995年。它当时是为了验证表单输入的验证。因为在JavaScript问世之前，表单验证是在服务器端进行的。而当时都是电话拨号上网的年代，网速只有20~30KB,服务器端验证数据是一件非常痛苦的事情。为了减少不必要的网络请求，提高网络效率，网景公司就决定自己来解决问题。<br>1995年，当时工作在Netscpe（网景公司）的布兰登（Brendar Eich）为解决类似于 “向服务器提交数据之前验证” 的问题。在Netcsape Navigator2.0 与Sun 公司联手开发一个称之为LiveScript 的脚本语言。<br>当时 java 十分流行，为了搭上 java 的顺风车，就将名字改为JavaScript。</li>
+<li>浏览器中的一站：微软发现浏览器市场很火，然后自己开发了一款浏览器—IE，为了推广自己的浏览器，就把 IE 捆绑到了windows操作系统中。Jscript<ul>
+<li>一战胜利的果实：ECMAScript 标准的确立。就是一个语言的规范，只规定了如何进行分支判断，如何进行定义变量，如何进行定义方法。。。</li>
+</ul>
+</li>
+<li>短暂的和平期：IE6【微软发现自己已经是天下无敌了，就把自己的IE6 开发团队解散了】 在和平期，JS 这梦语言主要做：表单验证，简单的特效，狗皮膏药（当时被称为脚本语言【不需要编译，直接运行时边解析边执行的语言】）</li>
+<li>二战：【主角：谷歌、IE、火狐(浴火重生的Netcsape,Mozilla借助已壮烈牺牲的Netscape遗产在2002年推出了Firefox浏览器)】谷歌在2008年，借助于Ajax，开始火起来！一方面提升渲染引擎的效率、另一方面，提升JS解析引擎的效率，最终，二战以谷歌的胜利结束，谷歌有了一款世上效率最快的JS解析引擎，叫做chrome V8 引擎；</li>
+<li>注意：谷歌的V8 引擎是用来解析执行JS代码的；</li>
+</ol>
+<h2 id="Node-js-的起源"><a href="#Node-js-的起源" class="headerlink" title="Node.js 的起源"></a>Node.js 的起源</h2><p><a href="http://blog.csdn.net/u012028371/article/details/54884056" target="_blank" rel="external">Node.js的历史由来</a></p>
+<blockquote>
+<p>作者，之前主要是做高性能服务器维护的；高性能的服务器有哪些<strong>必要的条件</strong>；必须要是<strong>异步非阻塞的</strong>、<strong>基于事件驱动的</strong>；作者在分析了上面两条基本条件之后，就开始研发高性能服务器！当时比较流行的语言有<code>C,C++</code>,<code>Java,C#</code>,<code>Javascript</code>。对于程序员来说，如果同时提供了同步和异步两种编程方式，程序员肯定会选择同步；<br>作者选择<code>Javascript</code>最主要的原因，就是这门语言是<code>单线程的</code>。多线程：程序员能主动开启子线程的语言，就叫做多线程的语言；<code>Thread td = new Thread();</code> 作者最终，选择的语言是Javascript、解析引擎是V8；免费、开源、由谷歌团队进行维护更新。刚开始，作者写出来的这个东西叫做<code>web.js</code>;后来，随着项目扩大和功能的完善，作者发现这款产品，不仅能做高性能的服务器，还能做许多事情，比如可以用这个东西去做前端包管理；于是就改名叫做<code>Node.js</code>;<br>像前端需要好用的工具，都是使用<code>node.js</code>开发出来的！</p>
+</blockquote>
+<h2 id="ECMAScript、浏览器中的Javascript、Node中的Javascript"><a href="#ECMAScript、浏览器中的Javascript、Node中的Javascript" class="headerlink" title="ECMAScript、浏览器中的Javascript、Node中的Javascript"></a>ECMAScript、浏览器中的Javascript、Node中的Javascript</h2><ul>
+<li>ECMAScript：语言规范；定义了如何定义变量、分支语句、函数、对象、内置对象；（ECMAScript语言规范就是一本书，这本书中，通过详细的规范，定义了这门语言中一些必要的特性；）</li>
+<li>浏览器中的Javascript:<ul>
+<li>浏览器中的JavaScript 组成部分：DOM + BOM + ECMAScript核心</li>
+</ul>
+</li>
+<li>Node 中的JavaScript: Node 中的JS，剔除了浏览器中扩展的DOM和BOM这两套API；在Node中，没有浏览器的概念，所以Node不需要DOM和BOM，Node中只有一个V8 JS解析引擎；<ul>
+<li>Node中的JavaScript组成部分：ECMAScript核心 + 核心API模块 + 一些第三方API模块</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>思考：为什么经常听说JS有兼容性，而很少听说Java或C#有兼容性?（解析引擎）</p>
+</blockquote>
+<h2 id="什么是Node-js"><a href="#什么是Node-js" class="headerlink" title="什么是Node.js"></a>什么是Node.js</h2><ul>
+<li><p><strong>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</strong></p>
+<ul>
+<li>我们使用JS写的Node代码，说白了，只是单纯的字符串而已；</li>
+<li>如果想要执行这些写好的代码，必须要有一个解析执行环境，这个环境就是chrome 的 V8 引擎；</li>
+</ul>
+</li>
+<li><p><strong>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</strong></p>
+<ul>
+<li>事件驱动：当触发某个事件的时候，执行事件中指定的代码！</li>
+<li>非阻塞式 I/O 的模型：采用非阻塞的操作，能够提高CPU处理的效率！代码表现形式是：会经常写回调函数。</li>
+</ul>
+</li>
+<li><p><strong>Node.js 的包管理器 npm，是全球最大的开源库生态系统。</strong></p>
+<ul>
+<li>npm由两层含义：首先它表示NPM的官网；其次，表示NPM这个包管理工具，能够方便我们从官网下载包；</li>
+<li>先使用<code>npm init -y</code>初始化一下包管理文件<code>package.json</code>，将来所有安装的包，都会记录到这个文件中</li>
+<li>使用<code>npm install 包名 --save/--save-dev</code>去安装包；其中，<code>install</code>可以简写成<code>i</code>;</li>
+<li><code>--save</code>表示把包安装到部署依赖中（在开发和部署上线都需要使用的包）； <code>--save-dev</code>表示安装到开发依赖（只在项目开发阶段需要用到的包）；</li>
+<li><code>--save</code>可以简写成<code>-S</code>；<code>--save-dev</code>可以简写成<code>-D</code>;</li>
+<li><code>npm uninstall 包名 --save/--save-dev</code>或者<code>npm remove 包名 --save/--save-dev</code></li>
+<li><code>npm i webpack -g</code>,其中，<code>-g</code>表示全局安装某些包，通过<code>-g</code>安装的包都在<code>C:\Users\用户名\AppData\Roaming\npm</code>下面</li>
+<li>使用 -g 安装的包都存放到了<code>C:\Users\自己的用户名\AppData\Roaming\npm</code>目录中；全局安装的包可以通过 cmd 命令行在任何地方使用；</li>
+<li>如果只需要安装项目运行的依赖，可以运行<code>npm i --production</code></li>
+</ul>
+</li>
+<li><p>NPM 和 （Github、码云） 和 Git之间的关系</p>
+<ul>
+<li>NPM是包管理平台（里面托管了各种各样的第三方包）</li>
+<li>Github、码云 代码托管平台（托管了各种各样的代码仓库）</li>
+<li>Git是用来对代码进行分支版本管理</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/13/跨域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/13/跨域/" itemprop="url">跨域</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-13T21:01:52+08:00">
+                2017-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="同源与跨域"><a href="#同源与跨域" class="headerlink" title="同源与跨域"></a>同源与跨域</h2><blockquote>
+<p>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同<br>跨域：不同源则跨域</p>
+</blockquote>
+<h3 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h3><ol>
+<li>顶级域名相同的可以通过domain.name来解决，即同时设置domain.name=”顶级域名”(如example.com)</li>
+<li>document.domain+iframe</li>
+<li>window.name+iframe</li>
+<li>location.hash+iframe</li>
+<li>window.postMessage()</li>
+<li>jsonp</li>
+</ol>
+<p>##jsonp</p>
+<blockquote>
+<p>原理：其本质是利用script标签的可跨域的特性，有服务器返回一个预先定义好的一个Javascript函数的调用，并且将服务器数据以该函数参数的形式传递过来，此方法需要前后端配合完成<br>jsonp是一种跨域解决方案，不是一种格式，只是在跨域传输的时候是传递json格式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">1、xhr 不能进行跨域请求</span></div><div class="line"><span class="comment">2、一些标签具有跨域请求资源的能力</span></div><div class="line"><span class="comment">3、link的使用  可以跨域请求资源 但是不能使用</span></div><div class="line"><span class="comment">4、通过script去请求 通过src的方式的请求都是get请求</span></div><div class="line"><span class="comment">5、把后台返回的数据内容引入script 结果：不管后台返回的是什么了类型都会解析成js并执行</span></div><div class="line"><span class="comment">6、如果不符合js语法会报错</span></div><div class="line"><span class="comment">7、遵循js语法 定义一个变量，根据变量获取后台数据</span></div><div class="line"><span class="comment">8、什么时候去使用这个变量：后台返回一个函数，前端定义以函数 理解成成功回调函数</span></div><div class="line"><span class="comment">8、后台通过拼接json格式的数据 返回的就是json对象</span></div><div class="line"><span class="comment">9、维护问题：一端维护 前端维护 callback值 一个前后端约定 规范</span></div><div class="line"><span class="comment">10、get请求 只能地址栏拼接数据</span></div><div class="line"><span class="comment">11、做到即时调用</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="comment">/* 点击时请求数据 */</span></div><div class="line">&lt;button&gt;jsonp&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">	function success(data)&#123;</span></div><div class="line"><span class="regexp">		console.log(data);</span></div><div class="line"><span class="regexp">	&#125;</span></div><div class="line"><span class="regexp">	window.onload = function()&#123;</span></div><div class="line"><span class="regexp">		document.querySelected("button").onclick = function()&#123;</span></div><div class="line"><span class="regexp">			/</span>* 动态生成script *<span class="regexp">/</span></div><div class="line"><span class="regexp">			var script = document.creatElement("script");</span></div><div class="line"><span class="regexp">			/</span>* get方式 后台的接口地址 *<span class="regexp">/</span></div><div class="line"><span class="regexp">			script.src = "http:/</span><span class="regexp">/api.study.com/</span>jsonp.pnp?callback=success$name=xjj<span class="string">";</span></div><div class="line"><span class="string">			/* 追加到页面 */</span></div><div class="line"><span class="string">			document.querySelelctor('body').appendChild(script);</span></div><div class="line"><span class="string">		&#125;</span></div><div class="line"><span class="string">	&#125;</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/12/ajax/" itemprop="url">AJAX编程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-12T20:32:45+08:00">
+                2017-10-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>AJAX(Asynchornous Javascript And XML) AJAX不是一门新的语言，而是对现有的技术的综合利用。本质上是在HTTP协议的基础上以异步的方式与服务器进行通信。</p>
+</blockquote>
+<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><blockquote>
+<p>指某段程序执行时不会阻塞其他程序的执行，其表现形式为程序的执行顺序不依赖书写顺序，相反则为同步。<strong>其优势在于不阻塞程序的执行，提高执行效率</strong>。XMLHttpRequest可以以异步的方式出路程序。</p>
+</blockquote>
+<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><blockquote>
+<p>浏览器内置对象，用于在后台与服务器通信(交换数据)，由此我们便可以实现对网页的部分刷新，而不是刷新整个页面。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 1.怎么使用这个对象 */</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest;</div><div class="line"><span class="comment">/* 2.怎么去 请求 */</span></div><div class="line"><span class="comment">/* 请求行 */</span></div><div class="line">xhr.open(<span class="string">'post'</span>,<span class="string">'01.php'</span>);</div><div class="line"><span class="comment">/* 请求头 */</span></div><div class="line"><span class="comment">/* get 没有必要设置 */</span></div><div class="line"><span class="comment">/* post 必须设置 Content-Type:application/x-www-form-urlencode */</span></div><div class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>,<span class="string">'application/x-www-form-urlencode'</span>);</div><div class="line"></div><div class="line"><span class="comment">/* 请求内容 */</span></div><div class="line"><span class="comment">/* 3.发送请求 */</span></div><div class="line">xhr.send(<span class="string">"name=xjj&amp;age=10"</span>);</div></pre></td></tr></table></figure>
+<h4 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h4><ol>
+<li><p>请求行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.open(<span class="string">'post'</span>,<span class="string">'01.php'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>请求头    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>,<span class="string">'application/x-www-form-urlencode'</span>);</div><div class="line"><span class="comment">//get请求时可以不设置</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>请求主体</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.send(<span class="string">"name=xjj&amp;age=10"</span>);</div><div class="line"><span class="comment">//get请求时可以传空</span></div></pre></td></tr></table></figure>
+<p><strong>注意书写顺序</strong></p>
+</li>
+</ol>
+<h4 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h4><blockquote>
+<p>HTTP响应是由服务端发出，作为客户端更应关心的是响应的结果<br>HTTP响应由3个组成部分，与XMLHttpRequest方法或属性的对应<br>由于服务器做出响应需要时间(比如网速慢等原因)，所以我们需要监听服务器的响应状态，然后才能进行处理。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>)&#123;</div><div class="line">	<span class="keyword">if</span>(xhr.status==<span class="number">200</span>)&#123;</div><div class="line">		<span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">		<span class="comment">/* 把内容渲染到页面中 */</span></div><div class="line">		<span class="built_in">document</span>.querySelector(<span class="string">'#result'</span>).innerHTML=xhr.responseText;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>readyState</strong><br>0: 请求未初始化，还没有调用open();<br>1: 请求已建立，但是还没发送(还没调用send());<br>2: 请求已发送，正在处理中(通常这个时候可以从响应头中获取内容)<br>3: 请求在处理，通常响应中已有部分数据可用了，但是服务器还没完成响应;<br>4: 响应已完成，可以获取并使用服务器的响应。</p>
+</blockquote>
+<p>onreadysatechange是Javascript的事件的一种，其意义在于监听XMLHttpRequest的状态</p>
+<ol>
+<li><p>获取响应状态行(包括状态码&amp;状态信息)</p>
+<blockquote>
+<p>xhr.status /<em> 状态码 </em>/<br>xhr.statusText /<em> 状态信息 </em>/</p>
+</blockquote>
+</li>
+<li><p>获取响应头</p>
+<blockquote>
+<p>xhr.getResponseHeader(‘Content-Type’);<br>xhr.getAllResponseHeaser();</p>
+</blockquote>
+</li>
+<li><p>响应主体</p>
+<blockquote>
+<p>xhr.responeText<br>xhr.responseXML</p>
+</blockquote>
+</li>
+</ol>
+<p>我们需要监听并判断响应头的MIME类型后确定使用requset.responseText或者request.responseXML</p>
+<h4 id="API详解"><a href="#API详解" class="headerlink" title="API详解"></a>API详解</h4><blockquote>
+<p>xhr.open() 发起请求，可以是get、post方式<br>xhr.setRequestHeader() 设置请求头<br>xhr.send() 发送请求主体， get 方式使用xhr.send(null)<br>xhr.onreadstatechange = function () { } 监听响应状态<br>xhr.status 响应码，如200<br>xhr.statusText 表示响应信息，如OK<br>xhr.getAllResponseHeaders() 获取全部响应头部信息<br>xhr.getResponseHeader(‘key’) 获取指定头信息<br>xhr.responseText、xhr.responseXML 都表示响应主体</p>
+<p>注：<em>GET和POST请求方式的差异</em></p>
+<ol>
+<li>GET没有请求主体，使用xhr.send(null)</li>
+<li>GET可以通过在请求url上添加请求参数</li>
+<li>POST可以通过xhr.send(‘name=it&amp;age=12’); 设置请求数据</li>
+<li>POST需要设置请求头 xhr.setRequestHeader(‘Content-Type’,’application/x-www-form-urlencode’);</li>
+<li>GET效率更好（应用多）</li>
+<li>GET大小限制约4k，POST没有限制</li>
+</ol>
+</blockquote>
+<p>如何获取复杂数据呢？</p>
+<h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><p>语法：</p>
+<ol>
+<li>必须有一个根元素</li>
+<li>不可有空格，不可以数字或 . 开头，大小写敏感</li>
+<li>不可交叉嵌套</li>
+<li>属性双引号</li>
+<li>特殊符号要用实体</li>
+<li>注释和HTML的一样</li>
+</ol>
+<p>xml数据：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>&gt;</div><div class="line">&lt;root&gt;</div><div class="line">	&lt;arrayList&gt;</div><div class="line">		&lt;array&gt;</div><div class="line">			&lt;src&gt;images/banner.jpg&lt;/src&gt;</div><div class="line">			&lt;newPrice&gt;12.00&lt;/newPrice&gt;</div><div class="line">			&lt;oldPrice&gt;22.00&lt;/oldPrice&gt;</div><div class="line">		&lt;/array&gt;</div><div class="line">	&lt;/arrayList&gt;</div><div class="line">&lt;/root&gt;</div></pre></td></tr></table></figure></p>
+<p>php数据：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">header(<span class="string">'Content-Type:text/xml;charset=urt-8'</span>);</div><div class="line">/* 以xml格式传输数据的时候要求响应内容格式是 text/xml */</div><div class="line">/* file_get_contents 获取文件内容 */</div><div class="line"><span class="variable">$xml</span> = file_get_contents(<span class="string">'01.xml'</span>);</div><div class="line">/* 输出内容 */</div><div class="line"><span class="built_in">echo</span> <span class="variable">$xml</span>;</div></pre></td></tr></table></figure></p>
+<p>script数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.open(<span class="string">'get'</span>,<span class="string">'01.php'</span>);</div><div class="line">xhr.send(<span class="literal">null</span>);</div><div class="line">xhr.onreadstatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">			<span class="comment">/* 获取XML格式内容 放回得是DOM对象 document */</span></div><div class="line">			<span class="keyword">var</span> xml = xhr.responseXML;</div><div class="line">			<span class="comment">/* 通过选择器可以获取xml数据 */</span></div><div class="line">			consoel.log(xml.querySelectorAll(<span class="string">'array'</span>)[<span class="number">0</span>].querySelector(<span class="string">'src'</span>).innerHTML);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>虽然可以描述和传输复杂数据，但是其解析过于复杂并且体积较大，所以实现开发已经很少用了</p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><blockquote>
+<p>即JavaScript Objeck Notation，另一种轻量级的文本数据交换格式，独立于语言</p>
+</blockquote>
+<p>语法:</p>
+<ol>
+<li>数据在名称/值中</li>
+<li>数据有逗号分隔开</li>
+<li>中括号保存数组，花括号保存对象</li>
+<li>属性使用双引号</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">  &#123;<span class="string">"src"</span>:<span class="string">"images/detail01.jpg"</span>,<span class="string">"oldPrice"</span>:<span class="string">"10.12"</span>,<span class="string">"newPrice"</span>:<span class="string">"130.00"</span>&#125;,</div><div class="line">  &#123;<span class="string">"src"</span>:<span class="string">"images/detail02.jpg"</span>,<span class="string">"oldPrice"</span>:<span class="string">"1.00"</span>,<span class="string">"newPrice"</span>:<span class="string">"11.00"</span>&#125;,</div><div class="line">  &#123;<span class="string">"src"</span>:<span class="string">"images/detail03.jpg"</span>,<span class="string">"oldPrice"</span>:<span class="string">"100.00"</span>,<span class="string">"newPrice"</span>:<span class="string">"1000.00"</span>&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>JSON数据在传输的过程中是以string形式，不同的语言都有各自的解析方式，需要解析之后才可以读取</p>
+<h4 id="PHP解析方法"><a href="#PHP解析方法" class="headerlink" title="PHP解析方法"></a>PHP解析方法</h4><blockquote>
+<p>将php数组转化成json字符 json_encode()<br>将json字符转化成php数组 json_decode()</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;?php </div><div class="line">    header(<span class="string">'Content-Type:text/html;charset=utf-8'</span>);</div><div class="line">    /*以json格式传输数据的时候要求响应内容格式是   application/json*/</div><div class="line">    /*注意也可以不设置  但是这遵循的一个规范*/</div><div class="line"></div><div class="line">    /*file_get_contents 获取文件内容*/</div><div class="line">    <span class="variable">$json</span> = file_get_contents(<span class="string">'01.json'</span>);</div><div class="line"></div><div class="line">    /*输出json内容*/</div><div class="line">    <span class="built_in">echo</span> <span class="variable">$json</span>;</div><div class="line">    <span class="built_in">echo</span> <span class="string">'&lt;br&gt;&lt;br&gt;'</span>;</div><div class="line"></div><div class="line">    <span class="variable">$array</span> = array(</div><div class="line">        array(<span class="string">'src'</span>=&gt;<span class="string">'images/detail01.jpg'</span>,<span class="string">'newPrice'</span>=&gt;<span class="string">'12.00'</span>,<span class="string">'oldPrice'</span>=&gt;<span class="string">'455.00'</span>),</div><div class="line">        array(<span class="string">'src'</span>=&gt;<span class="string">'images/detail02.jpg'</span>,<span class="string">'newPrice'</span>=&gt;<span class="string">'65.00'</span>,<span class="string">'oldPrice'</span>=&gt;<span class="string">'878.00'</span>),</div><div class="line">        array( <span class="string">'src'</span>=&gt;<span class="string">'images/detail01.jpg'</span>,<span class="string">'newPrice'</span>=&gt;<span class="string">'100.00'</span>,<span class="string">'oldPrice'</span>=&gt;<span class="string">'1000.00'</span>)</div><div class="line">    );</div><div class="line"></div><div class="line">    /*将php数组转化成json字符*/</div><div class="line">    <span class="variable">$json_array</span> = json_encode(<span class="variable">$array</span>);</div><div class="line">    <span class="built_in">echo</span> <span class="variable">$json_array</span>;</div><div class="line">    <span class="built_in">echo</span> <span class="string">'&lt;br&gt;&lt;br&gt;'</span>;</div><div class="line"></div><div class="line">    /*将json字符转化成php数组*/</div><div class="line">    <span class="variable">$array_json</span> = json_decode(<span class="variable">$json_array</span>);</div><div class="line">    <span class="built_in">echo</span> <span class="variable">$array_json</span>;</div><div class="line">    <span class="built_in">echo</span> <span class="string">'&lt;br&gt;&lt;br&gt;'</span>;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<h4 id="JavaScript解析方法"><a href="#JavaScript解析方法" class="headerlink" title="JavaScript解析方法"></a>JavaScript解析方法</h4><blockquote>
+<p>利用JSON对象，把JSON对象转化成字符串：JSON.stringify();<br>把字符串转化成JSON对象：JSON.parse()</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest;</div><div class="line">   xhr.open(<span class="string">'get'</span>,<span class="string">'01.php'</span>);</div><div class="line">   xhr.send(<span class="literal">null</span>);</div><div class="line">   xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">if</span>(xhr.status == <span class="number">200</span> &amp;&amp; xhr.readyState == <span class="number">4</span>)&#123;</div><div class="line">           <span class="comment">/*获取仅仅是字符串*/</span></div><div class="line">           <span class="keyword">var</span> text = xhr.responseText;</div><div class="line"></div><div class="line">           <span class="comment">/*需要把字符串转化成JSON对象*/</span></div><div class="line">           <span class="keyword">var</span> json_obj = <span class="built_in">JSON</span>.parse(text);</div><div class="line">           <span class="built_in">console</span>.log(json_obj);</div><div class="line"></div><div class="line">           <span class="comment">/*我们也可以把JSON对象转化成字符串*/</span></div><div class="line">           <span class="keyword">var</span> json_str = <span class="built_in">JSON</span>.stringify(json_obj);</div><div class="line">           <span class="built_in">console</span>.log(json_str);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>JSON兼容处理json2.js<br>总结：JSON体积小、解析方便且高效，在实际开发成为首选。</p>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>关于IE的兼容方面，了解即可。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">XHR</span>(<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="keyword">var</span> xhr;</div><div class="line">       <span class="keyword">try</span> &#123;</div><div class="line">           xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*如果 try内的程序运行错误  抛出异常  捕捉异常  上面程序当中运行的错误*/</span></div><div class="line">       <span class="keyword">catch</span>(e) &#123;</div><div class="line">           <span class="comment">/*在不同的IE版本下初始  ActiveXObject  需要传入的标识*/</span></div><div class="line">           <span class="keyword">var</span> IEXHRVers =[<span class="string">"Msxml3.XMLHTTP"</span>,<span class="string">"Msxml2.XMLHTTP"</span>,<span class="string">"Microsoft.XMLHTTP"</span>];</div><div class="line"></div><div class="line">           <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;IEXHRVers.length;i++) &#123;</div><div class="line">               <span class="keyword">try</span> &#123;</div><div class="line">                   xhr = <span class="keyword">new</span> ActiveXObject(IEXHRVers[i]);</div><div class="line">               &#125;</div><div class="line">               <span class="keyword">catch</span>(e) &#123;</div><div class="line">                   <span class="comment">/*如果出现错误的时候  停止当次的循环*/</span></div><div class="line">                   <span class="keyword">continue</span>;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> xhr;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h3 id="封装AJAX工具"><a href="#封装AJAX工具" class="headerlink" title="封装AJAX工具"></a>封装AJAX工具</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 分析参数（变化的量） */</span></div><div class="line"><span class="comment">/*  </span></div><div class="line"><span class="comment">1.请求类型			type(get,post)</span></div><div class="line"><span class="comment">2.请求地址			url</span></div><div class="line"><span class="comment">3.是否异步			async  true、false</span></div><div class="line"><span class="comment">4.内容格式			json</span></div><div class="line"><span class="comment">5.请求数据			data  json对象</span></div><div class="line"><span class="comment">6.响应成功的函数	success  function(data)&#123;...&#125;</span></div><div class="line"><span class="comment">7.响应失败的函数	error  function()</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="comment">/* 这些都是动态的参数 options 参数对象 */</span>	</div><div class="line"><span class="comment">/* 声明一个全局变量 */</span></div><div class="line"><span class="built_in">window</span>.$ = &#123;&#125;;</div><div class="line"><span class="comment">/* 声明一个ajax方法 */</span>	</div><div class="line">$.ajax = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(!options || <span class="keyword">typeof</span> options != <span class="string">"object"</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	<span class="comment">/* 请求类型 */</span></div><div class="line">	<span class="keyword">var</span> type = options.type !== <span class="string">"post"</span> ? <span class="string">"get"</span> : <span class="string">"post"</span>;<span class="comment">/* 默认是get */</span></div><div class="line">	<span class="comment">/* 请求地址 */</span></div><div class="line">	<span class="keyword">var</span> url = options.url || location.pathname;</div><div class="line">	<span class="comment">/* 请求内容的格式 */</span></div><div class="line">	<span class="keyword">var</span> contentType = options.contentType || <span class="string">"text/html"</span>;</div><div class="line">	<span class="comment">/* 是否是异步 */</span></div><div class="line">	<span class="keyword">var</span> <span class="keyword">async</span> = options.async !== <span class="literal">false</span> ? <span class="literal">true</span> : <span class="literal">false</span>;<span class="comment">/* 默认是异步 */</span></div><div class="line">	<span class="comment">/* 传输数据 */</span></div><div class="line">	<span class="keyword">var</span> data = <span class="keyword">typeof</span> options.data !== <span class="string">"object"</span> ? options.data : &#123;&#125;;</div><div class="line">	<span class="comment">/* name:'js' */</span></div><div class="line">	<span class="comment">/* 在提交的时候是需要转化为name=xjj 这种格式的数据字符串 */</span></div><div class="line">	<span class="keyword">var</span> dataStr = <span class="string">''</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> data)&#123;</div><div class="line">		dataStr += key + <span class="string">"="</span> + data[key] + <span class="string">"&amp;"</span>;</div><div class="line">	&#125;</div><div class="line">	dataStr = dataStr.slice(<span class="number">0</span>,<span class="number">-1</span>);</div><div class="line"></div><div class="line">	<span class="comment">/* ajax编程 */</span></div><div class="line">	<span class="keyword">var</span> xhr = XMLHttpRequest();</div><div class="line">	<span class="comment">/* 请求行 */</span></div><div class="line">	xhr.open(type,(type == <span class="string">'get'</span>? url + <span class="string">"?"</span> +dataStr:url),<span class="keyword">async</span>);</div><div class="line">	<span class="comment">/* 请求头 */</span></div><div class="line">	<span class="keyword">if</span>(type == <span class="string">"post"</span>)&#123;</div><div class="line">		xhr.setRequestHeader(<span class="string">'Content-Type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/* 请求主体 */</span></div><div class="line">	xhr.send(type==<span class="string">'get'</span>?<span class="literal">null</span>:dataStr);</div><div class="line">	<span class="comment">/* 监听响应状态 */</span></div><div class="line">	xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>)&#123;</div><div class="line">			<span class="comment">/* 请求响应完成 */</span></div><div class="line">			<span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">			<span class="comment">/* 响应成功 */</span></div><div class="line">				<span class="keyword">var</span> data = <span class="string">''</span>;</div><div class="line">				<span class="keyword">var</span> contentType = xhr.getResponseHeader(<span class="string">'Content-Type'</span>);</div><div class="line">				<span class="comment">/* 如果服务器返回的是xml */</span></div><div class="line">				<span class="keyword">if</span>(contentType.indexOf(<span class="string">'xml'</span> &gt; <span class="number">-1</span>))&#123;</div><div class="line">					data = xhr.responseXML;</div><div class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(contentType.indexOf(<span class="string">'json'</span>) &gt; <span class="number">-1</span>)&#123;</div><div class="line">					<span class="comment">/* 如果服务器返回的是json */</span></div><div class="line">					<span class="comment">/* 转化json对象 */</span></div><div class="line">					data = <span class="built_in">JSON</span>.parse(xhr.responseText);</div><div class="line">				&#125;<span class="keyword">else</span>&#123;</div><div class="line">					<span class="comment">/* 否则的话就是字符串 */</span></div><div class="line">					data = xhr.responseText;</div><div class="line">				&#125;</div><div class="line">				<span class="comment">/* 回调成功函数 */</span> </div><div class="line">				options.success &amp;&amp; options.success(data);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">			<span class="comment">/* 响应失败 */</span></div><div class="line">				<span class="keyword">var</span> info = &#123;<span class="attr">status</span>:xhr.status,<span class="attr">statusText</span>:xhr.statusText&#125;;</div><div class="line">				options.error &amp;&amp; options.error(info)	</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">$.get = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">	options.type = <span class="string">"get"</span></div><div class="line">	$.ajax(options);</div><div class="line">&#125;</div><div class="line">$.post = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">	options.type = <span class="string">"post"</span></div><div class="line">	$.ajax(options);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="jquery的ajax"><a href="#jquery的ajax" class="headerlink" title="jquery的ajax"></a>jquery的ajax</h3><blockquote>
+<p>jquery为我们提供了更强大的AJAX封装</p>
+</blockquote>
+<ol>
+<li>$.ajax({}) 可配置方式发起Ajax请求</li>
+<li>$.get() 以GET方式发起Ajax请求</li>
+<li>$.post() 以POST方式发起Ajax请求</li>
+<li>$(‘form’).serialize() 序列化表单（即格式化key=val&amp;key=val）</li>
+<li>url 接口地址</li>
+<li>type 请求方式</li>
+<li>timeout 请求超时</li>
+<li>dataType 服务器返回格式</li>
+<li>data 发送请求数据</li>
+<li>beforeSend: function () {} 请求发起前调用</li>
+<li>success 成功响应后调用</li>
+<li>error 错误响应时调用</li>
+<li>complete 响应完成时调用（包括成功和失败）</li>
+<li>jQuery Ajax介绍</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/16/git/" itemprop="url">git</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-16T10:16:16+08:00">
+                2017-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>git 用于版本控制工具，方便、高效地管理代码。</p>
+</blockquote>
+<h2 id="什么是shell和vi"><a href="#什么是shell和vi" class="headerlink" title="什么是shell和vi"></a>什么是shell和vi</h2><h3 id="什么是shell"><a href="#什么是shell" class="headerlink" title="什么是shell"></a>什么是shell</h3><blockquote>
+<p>在计算机科学中，shell俗称壳，用来区别与Kernel（核），是指“提供使用者使用界面”的软件（命令解析器）。它类似于DOS下得command和后来的cmd.exe。<strong>它接收用户的命令程序，然后调用相应的应用程序</strong>。</p>
+</blockquote>
+<h3 id="shell分类"><a href="#shell分类" class="headerlink" title="shell分类"></a>shell分类</h3><ol>
+<li>图形界面shell：<br>通过提供友好的可视化界面，调用相应应用程序，如Windows系列操作系统，Linux系统的图形化应用程序GNOME、KDE等。</li>
+<li>命令行shell：通过键盘输入特定命令的方式，调用相应的应用程序，如windows系统的cmd.exe、Windows PowerShell，Linux系统的Bourne shell(sh)、Bouune Again shell(bash)等。</li>
+</ol>
+<h3 id="认识bash这个shell"><a href="#认识bash这个shell" class="headerlink" title="认识bash这个shell"></a>认识bash这个shell</h3><blockquote>
+<p>在Windows系统下使用bash，需要一个软件，这个软件<em>模拟继承</em>了bash大部分命令。各个shell的功能都差不多，Linux默认使用bash。</p>
+</blockquote>
+<h4 id="bash命令格式"><a href="#bash命令格式" class="headerlink" title="bash命令格式"></a>bash命令格式</h4><blockquote>
+<p>命令/[-options] /[参数]，如：tar zxvf demo.tar.gz<br>查看帮助：命令 –help</p>
+</blockquote>
+<h4 id="bash常见命令"><a href="#bash常见命令" class="headerlink" title="bash常见命令"></a>bash常见命令</h4><ul>
+<li>‘pwd’(Print Working Directory)查看当前目录</li>
+<li>‘cd’(Change Directory)切换目录，如’cd /etc’</li>
+<li>‘ls’(List)查看当前目录下的内容，如’ls -al’</li>
+<li>‘mkdir’(Make Directory)创建目录，如’mkdir blog’</li>
+<li>‘touch’创建文件，如’touch index.html’</li>
+<li>‘cat’查看文件全部内容，如’cat index.html’</li>
+<li>‘less’查看文件，如’more /etc/password’、’less /etc/passwd’</li>
+<li>‘rm’(Remove)删除文件，如’rm index.html’、’rm -rf blog’,<strong>rm -rf blog这个方法要慎用，可以把非空文件夹删除，且不可恢复</strong></li>
+<li>‘rmdir’删除文件夹，<strong>只能删除空文件夹</strong>，不常用</li>
+<li>‘mv(move)’移动文件或重命名，如’mv index.html ./demo/index.html’</li>
+<li>‘cp(copy)’复制文件，’cp index.html ./demo/index.html’</li>
+<li>‘tab’自动补全，连按两次会将所有的匹配内容显示出来</li>
+<li>‘&gt;’和’&gt;&gt;’重定向，如’echo hello world!&gt;readme.md’,’&gt;’覆盖、’&gt;&gt;’追加</li>
+<li>‘|’管道符，可以将多个命令连接使用，上一次(命令)的执行结果当做下一次（命令）的执行参数。</li>
+<li>‘grep’匹配内容，一般结合管道符使用</li>
+</ul>
+<h3 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h3><blockquote>
+<p>如同window下的记事本一样，vi编辑器是Linux下的标配，通过他可以创建、编辑文件。它是一个随系统一起安装的文本编辑软件</p>
+</blockquote>
+<h4 id="三种模式"><a href="#三种模式" class="headerlink" title="三种模式"></a>三种模式</h4><blockquote>
+<p>vi编辑器提供了<strong>3种模式</strong>，分别是<strong>命令模式</strong>、<strong>插入模式</strong>、<strong>底行模式</strong>，每种模式下用户所能进行的操作是不一样的。3种模式的切换如下图所示：<br><img src="/imgs/3modalsToggle.jpg" alt="Alt 3种模式的切换"><br>从上图我们发现，输入模式不能直接切换到末行模式的，必须要先切换到命令模式（俺ESC键）</p>
+</blockquote>
+<h4 id="使用vi-vim编辑器"><a href="#使用vi-vim编辑器" class="headerlink" title="使用vi/vim编辑器"></a>使用vi/vim编辑器</h4><ul>
+<li>打开文件/创建文件， vi 文件路径</li>
+<li>底行模式：w 保存，:w filename 另存为</li>
+<li>底行模式：q 退出</li>
+<li>底行模式：wq 保存并退出</li>
+<li>底行模式：e! 撤销更改，返回上一次保存的状态</li>
+<li>底行模式：q! 不保存强制退出</li>
+<li>底行模式：set nu 设置行号</li>
+<li>命令模式：ZZ （大写）保存并退出</li>
+<li>命令模式：u 撤销操作，可多次使用</li>
+<li>命令模式：dd 删除当前行</li>
+<li>命令模式：yy 复制当前行</li>
+<li>命令模式：p 粘贴内容</li>
+<li>命令模式：ctrl+f 向前翻页</li>
+<li>命令模式：ctrl+b 向后翻页</li>
+<li>命令模式：i 进入编辑模式，当前光标出插入</li>
+<li>命令模式：a 进入编辑模式，当前光标后插入</li>
+<li>命令模式：A 进入编辑模式，光标移动行尾插入</li>
+<li>命令模式：o 进入编辑模式，当前行的下面插入</li>
+<li>命令模式：O 进入编辑模式，当前行的上面插入</li>
+</ul>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><blockquote>
+<p>SSH是一种网络协议，用于计算机之间的加密登录。SSH存在多中实现，既有商业实现，也有开源实现。本文是针对OpenSSH，它是自由软件，应用广泛。<br>如果针对Windows系统中使用SSH，会用到另一种软件PuTTY，之后用到的git客户端也集成了SSH。<br>格式：ssh user@host<br>user 代表真实存在的用户，host代表要登录的远程计算机<br>常见的有两种加密技术，分别是<strong>对称加密</strong>和<strong>非对称加密</strong>，SSH属于后者。对称加密算法在加密和解密时用到的是同一个秘钥；而非对称加密算法需要两个秘钥来进行加密和解密，这两个秘钥分别是<strong>公开秘钥</strong>（public key,简称公钥）和<strong>私有密钥</strong>（private,简称私钥）。</p>
+</blockquote>
+<ul>
+<li><p>工作原理</p>
+<blockquote>
+<p>公钥和私钥成对出现，可以通过 <strong>ssh-keygen -t rsa</strong> 来创建，既可以通过公钥来加密数据，也可以通过私钥来加密技术。如果是以公钥来加密数据，只能与之对应的私钥才可以解密，相反，如果以私钥进行数据加密，则只能与之对应的公钥才可以将数据进行解密。提高信息传递的安全性。</p>
+</blockquote>
+</li>
+<li><p>免密码登录</p>
+<blockquote>
+<p>将本地机器上的公钥保存到特定的远程计算机上，这样我们再次登录访问这台远程计算机的时候就可以免密码登录。</p>
+</blockquote>
+</li>
+<li><p>设置SSH方法：</p>
+<blockquote>
+<p>1、ssh-keygen -t rsa 创建公钥和私钥（默认在用户目录 /.ssh 目录下）<br>2、ssh-copy-id user@host 添加到对应的远程主机的用户目录 ./ssh 目录下<br>3、也可以登录远程主机，进入到用户目录 ./ssh 目录下手动创建authorized_keys 文件，并将自己的公钥粘贴如该文件。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h3><blockquote>
+<p>版本控制（Version Control Systems）是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。这个系统可以自动帮我们备份文件的每一次更改，并且可以非常方便的恢复到任意的备份（版本）状态。<br>举例：我们通常都是手动的重命名一个文件进行备份的，index.html改成index1.html或者index.html.bak等形式，然后这种方式对于单个文件我们还能够管理，但是对于整个项目而言，就会成为噩梦了！！！我们不得不借助于软件来实现。<br>实现版本控制的软件有很多种类，大致可以分为本地版本控制系统、集中式版本控制系统、分布式版本控制系统。</p>
+</blockquote>
+<h3 id="本地版本控制系统"><a href="#本地版本控制系统" class="headerlink" title="本地版本控制系统"></a>本地版本控制系统</h3><blockquote>
+<p>借助软件我们可以记录下文件的每一次修改，如下图所示，文件被修改后，记录下了3个版本，这样我们通过版本控制系统（软件）便可以非常方便的恢复到任意版本。<br><img src="/imgs/版本控制.jpg" alt="Alt 本地版本控制"></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/27/函数闭包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/27/函数闭包/" itemprop="url">函数闭包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-27T23:27:26+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>   函数闭包是能够读取其他函数内部变量的函数, 由于在JavaScript中, 只有函数的内部的子函数才能读取局部变量，因此可以把闭包理解为“定义在一个函数的内部的函数，所以本质上, 闭包就是将函数内部和函数外部连接起来的一座桥梁”.<br>   如果一个函数的内部返回一个函数或者多个函数，而返回的函数中具有对自己的外层作用域中的成员的读取或者修改，那么称这个函数为<strong>闭包函数</strong></p>
+</blockquote>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-closuer-function-example"><a href="#Create-a-closuer-function-example" class="headerlink" title="Create a closuer function example"></a>Create a closuer function example</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> foo = <span class="string">'bar'</span>;</div><div class="line">	<span class="keyword">var</span> getFoo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> foo;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">var</span> setFoo = <span class="function"><span class="keyword">function</span> (<span class="params">val</span>)</span>&#123;</div><div class="line">		foo = val;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span>&#123;</div><div class="line">		getFoo: getFoo,</div><div class="line">		setFoo: setFoo</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = fn();</div><div class="line"><span class="built_in">console</span>.log(obj.getFoo);</div></pre></td></tr></table></figure>
+<p>More info: <a href="http://www.w3school.com.cn/js/pro_js_functions_closures.asp" target="_blank" rel="external">closures from W3C</a></p>
+<h3 id="example-two"><a href="#example-two" class="headerlink" title="example two"></a>example two</h3><blockquote>
+<p>   在js中定时器永远都会在普通函数之后执行，即使延时时间为0，因为定时器的特殊性，属于异步操作，不阻碍其他程序的运行，具有延时功能。如下面的例子，for循环不会等定时器执行，直接进行下一次的循环执行</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)&#123;</div><div class="line">	setTimeout(<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(i);</div><div class="line">	&#125;,<span class="number">0</span>);</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'我先显示'</span>);</div></pre></td></tr></table></figure>
+<h3 id="Sandboxing-Pattern"><a href="#Sandboxing-Pattern" class="headerlink" title="Sandboxing Pattern"></a>Sandboxing Pattern</h3><blockquote>
+<p>   沙箱模式：利用匿名函数自执行来保护内部函数成员不被外部访问或者修改</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> age = <span class="number">12</span>;</div><div class="line">	&#125;</div><div class="line">	F.prototype.getAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> age;</div><div class="line">	&#125;</div><div class="line">	F.prototype.setAge = <span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(val &lt; <span class="number">18</span>)&#123;</div><div class="line">			<span class="built_in">console</span>.log(<span class="string">'age不能小于18'</span>);</div><div class="line">		&#125;</div><div class="line">		age = val;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">window</span>.F = F;</div><div class="line">&#125;)()</div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"><span class="built_in">console</span>.log(f.getAge());</div></pre></td></tr></table></figure>
+<p>More info: <a href="http://blog.csdn.net/wpx_20131212/article/details/51655074" target="_blank" rel="external">from CSDN</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/25/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/25/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-25T22:50:08+08:00">
+                2017-08-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/S.png"
+                alt="yatou" />
+            
+              <p class="site-author-name" itemprop="name">yatou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yatou</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
 
-var backgroundColor = "34495E";
+        
 
-$(".fancybox-thumb").fancybox({
-  prevEffect: 'none',
-  nextEffect: 'none',
-  helpers: {
-    title: {
-      type: 'outside'
-    },
-    thumbs: {
-      width: 50,
-      height: 50
-    }
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-});
-
-// show video with plyr
-$(".video-container iframe").each(function(i){
-  var url = $(this).attr('src');
-  var id = url.split('/').pop();
-  var plyrContainer = document.createElement('div');
-  plyrContainer.className = 'plyr';
-  var plyrElement = document.createElement('div');
-  plyrElement.dataset.videoId = id;
-  switch(true) {
-    case url.search('youtube.com') >= 0:
-      plyrElement.dataset.type = 'youtube';
-      break;
-    case url.search('vimeo.com') >= 0:
-      plyrElement.dataset.type = 'vimeo';
-      break;
-    default:
-      return;
-  };
-  plyrContainer.appendChild(plyrElement);
-  $(this).parent().html(plyrContainer);
-});
-plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
-
