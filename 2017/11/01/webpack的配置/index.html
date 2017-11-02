@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；   webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上">
+<meta name="description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；  webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上述的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack的配置">
 <meta property="og:url" content="http://yoursite.com/2017/11/01/webpack的配置/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；   webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上">
-<meta property="og:updated_time" content="2017-11-01T15:02:34.328Z">
+<meta property="og:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；  webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上述的">
+<meta property="og:updated_time" content="2017-11-02T09:38:32.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack的配置">
-<meta name="twitter:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；   webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上">
+<meta name="twitter:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；  webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上述的">
 
 
 
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-01T19:15:08+08:00">
                 2017-11-01
@@ -298,15 +298,13 @@
       
 
       
-        <blockquote>
-<p>网页中引入的静态资源多了以后有什么问题？？？</p>
+        <p>网页中引入的静态资源多了以后有什么问题？？？</p>
 <ol>
 <li>网页加载速度慢， 因为 我们要发起很多的二次请求；</li>
 <li>要处理错综复杂的依赖关系<br>如何解决上述两个问题</li>
 <li>合并、压缩、精灵图、图片的Base64编码</li>
 <li>可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；</li>
 </ol>
-</blockquote>
 <h2 id="webpack-是前端的一个项目构建工具，它是基于-Node-js-开发出来的一个前端工具；"><a href="#webpack-是前端的一个项目构建工具，它是基于-Node-js-开发出来的一个前端工具；" class="headerlink" title="webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；"></a>webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；</h2><h2 id="如何完美实现上述的2种解决方案"><a href="#如何完美实现上述的2种解决方案" class="headerlink" title="如何完美实现上述的2种解决方案"></a>如何完美实现上述的2种解决方案</h2><ol>
 <li>使用Gulp， 是基于 task 任务的；</li>
 <li>使用Webpack， 是基于整个项目进行构建的；</li>
@@ -487,10 +485,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -515,7 +513,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -583,7 +581,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
