@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ES6中的promise的出现给我们很好的解决了回调地狱的问题，在使用ES5的时候，在多层嵌套回调时，写完的代码层次过多，很难进行维护和二次开发，ES6认识到了这点问题，现在promise的使用，完美解决了这个问题。那我们如何理解promise这个单词在ES5中的作用那，你可以想象他是一种承诺，当它成功时执行一些代码，当它失败时执行一些代码。它更符合人类的行为思考习惯，而不在是晦涩难懂的冰冷语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="promise">
+<meta property="og:url" content="http://yoursite.com/2017/11/07/promise/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="ES6中的promise的出现给我们很好的解决了回调地狱的问题，在使用ES5的时候，在多层嵌套回调时，写完的代码层次过多，很难进行维护和二次开发，ES6认识到了这点问题，现在promise的使用，完美解决了这个问题。那我们如何理解promise这个单词在ES5中的作用那，你可以想象他是一种承诺，当它成功时执行一些代码，当它失败时执行一些代码。它更符合人类的行为思考习惯，而不在是晦涩难懂的冰冷语言">
+<meta property="og:updated_time" content="2017-11-08T02:11:27.170Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="promise">
+<meta name="twitter:description" content="ES6中的promise的出现给我们很好的解决了回调地狱的问题，在使用ES5的时候，在多层嵌套回调时，写完的代码层次过多，很难进行维护和二次开发，ES6认识到了这点问题，现在promise的使用，完美解决了这个问题。那我们如何理解promise这个单词在ES5中的作用那，你可以想象他是一种承诺，当它成功时执行一些代码，当它失败时执行一些代码。它更符合人类的行为思考习惯，而不在是晦涩难懂的冰冷语言">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/07/promise/"/>
+
+
+
+
+
+  <title>promise | blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">promise</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T16:27:01+08:00">
+                2017-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>ES6中的promise的出现给我们很好的解决了回调地狱的问题，在使用ES5的时候，在多层嵌套回调时，写完的代码层次过多，很难进行维护和二次开发，ES6认识到了这点问题，现在promise的使用，完美解决了这个问题。那我们如何理解promise这个单词在ES5中的作用那，你可以想象他是一种承诺，当它成功时执行一些代码，当它失败时执行一些代码。它更符合人类的行为思考习惯，而不在是晦涩难懂的冰冷语言。</p>
+</blockquote>
+<h2 id="什么是promise"><a href="#什么是promise" class="headerlink" title="什么是promise"></a>什么是promise</h2><ol>
+<li>promise 是一个构造函数，我们可以通过<code>new Promise()</code> 来得到promise实例</li>
+<li>在Promise身上有两个重要的函数：reject（失败之后回调函数） 和 resolve（成功之后的回调函数）</li>
+<li>在promise构造函数的Prototype 属性中有一个 <code>.then()</code>方法，也就是说，只要是Promise创建的实例都可以访问到<code>.then()</code>方法</li>
+<li>Promise表示一个异步操作，每当我们new 一个Promise 的实例，这个实例就表示一个具体的异步操作；</li>
+<li>既然Promise 的实例，是一个异步操作，那么，这个异步操作的结果只能有两种状态：<ul>
+<li>状态1：异步操作失败了，需要在内部调用失败的回调函数reject，把结果返回给调用者</li>
+<li>状态2：异步操作成功了,需要在内部调用成功的回调函数resolve,把结果返回给调用者</li>
+<li>由于Promise 的实例，是一个异步操作，所以内部拿到的操作结果，无法使用return把操作结果返回给调用者；这时候，只能使用回调函数的形式，来把成功或者失败的结果，返回给调用者；</li>
+</ul>
+</li>
+<li>我们可以在new 出来的 Promise 实例中，调用<code>.then()</code>方法，【预先e】为这个Promise异步指定成功(resolve)和失败(reject)回调函数</li>
+</ol>
+<h2 id="promise的使用"><a href="#promise的使用" class="headerlink" title="promise的使用"></a>promise的使用</h2><h3 id="【形式上】的异步操作"><a href="#【形式上】的异步操作" class="headerlink" title="【形式上】的异步操作"></a>【形式上】的异步操作</h3><h4 id="什么是形式上的异步操作"><a href="#什么是形式上的异步操作" class="headerlink" title="什么是形式上的异步操作"></a>什么是形式上的异步操作</h4><blockquote>
+<p>我们只知道这是一个异步操作，但是具体做什么我们目前还不知道</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var promise = new Promise();</div></pre></td></tr></table></figure>
+<h3 id="【具体】的异步操作"><a href="#【具体】的异步操作" class="headerlink" title="【具体】的异步操作"></a>【具体】的异步操作</h3><p>如下形式就是一个具体的异步操作，使用function指定具体的异步操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">var promise = new Promise(function()&#123;</div><div class="line">//在这个function内部写的是，具体的异步操作。</div><div class="line">	fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">		if (err) throw err;</div><div class="line">		console.log(dataStr);</div><div class="line">	&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：</p>
+<pre><code>1. 每当我们new一个Promise实例的时候，就会**立即执行**这个 异步操作中的代码
+2. 也就是说，new的时候，除了能够得到一个Promise实例之外，还会立即调用我们为Promise构造函数传递的那个function，执行这个function 中的异步操作代码（fs模块是异步的），无法做到按需执行
+3. 要想做到按需执行，需要放在函数function中才可以，因为只用**function能按需执行**
+</code></pre></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function readFile()&#123;</div><div class="line">	const fs = require(&apos;fs&apos;);</div><div class="line">	var promise = new Promise(function()&#123;</div><div class="line">	//在这个function内部写的是，具体的异步操作。</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if (err) throw err;</div><div class="line">			console.log(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//在需要调用的地方，调用readFile()</div><div class="line">readFile();</div></pre></td></tr></table></figure>
+<h3 id="通过-then-指定成功和失败的回调"><a href="#通过-then-指定成功和失败的回调" class="headerlink" title="通过.then()指定成功和失败的回调"></a>通过<code>.then()</code>指定成功和失败的回调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//初衷：传递一个路径，返回读取的内容</div><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	var promise = new Promise(function(resolve, reject)&#123;</div><div class="line">	//这里 resolve 和 reject只是一个形参</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">	//回这个promise实例</div><div class="line">	return promise;</div><div class="line">&#125;</div><div class="line">//调用这个getFileByPath方法</div><div class="line">var p = getFileByPath(&apos;./files/2.txt&apos;);</div><div class="line">//立即通过 .then 的方法为promise实例指定了成功和失败的回调函数</div><div class="line">p.then(function (data) &#123;</div><div class="line">	console.log(data + &apos;----&apos;);</div><div class="line">&#125;, function(err) &#123;</div><div class="line">	console.log(err.message);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>以上例子可以改写为如下形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	//回这个promise实例</div><div class="line">	return new Promise(function(resolve, reject)&#123;</div><div class="line">	//这里 resolve 和 reject只是一个形参</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//调用这个getFileByPath方法</div><div class="line">//立即通过 .then 的方法为promise实例指定了成功和失败的回调函数</div><div class="line">getFileByPath(&apos;./files/2.txt&apos;)</div><div class="line">.then(function (data) &#123;</div><div class="line">	console.log(data + &apos;----&apos;);</div><div class="line">&#125;, function(err) &#123;</div><div class="line">	console.log(err.message);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="使用Promise解决回调地狱"><a href="#使用Promise解决回调地狱" class="headerlink" title="使用Promise解决回调地狱"></a>使用Promise解决回调地狱</h3><p>若是没有<code>.then()</code>的方法，则使用多次回调的方法解决异步的按序执行如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	//回这个promise实例</div><div class="line">	return new Promise(function(resolve, reject)&#123;</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//先读取文件一，再读取文件2，最后读取文件3</div><div class="line">//注意：通过 .then 指定的回调函数的时候，成功的回调函数必须传</div><div class="line">//读取文件1</div><div class="line">getFileByPath(&apos;./files/1.txt&apos;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件2</div><div class="line">		getFileByPath(&apos;./files/2.txt&apos;)</div><div class="line">			.then(function (data) &#123;</div><div class="line">				console.log(data);</div><div class="line">				//读取文件3</div><div class="line">				getFileByPath(&apos;./filse/3.txt&apos;)</div><div class="line">					.then(function (data) &#123;</div><div class="line">						console.log(data);</div><div class="line">					&#125;)</div><div class="line">			&#125;)</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<p>通过<code>.then()</code>的方法可以解决回调地狱的问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	//回这个promise实例</div><div class="line">	return new Promise(function(resolve, reject)&#123;</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//先读取文件一，再读取文件2，最后读取文件3</div><div class="line">//注意：通过 .then 指定的回调函数的时候，成功的回调函数必须传</div><div class="line">//读取文件1</div><div class="line">getFileByPath(&apos;./files/1.txt&apos;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件2</div><div class="line">		return getFileByPath(&apos;./files/2.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件3</div><div class="line">		return getFileByPath(&apos;./filse/3.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<h3 id="使用promise解决捕获异常的两种方式"><a href="#使用promise解决捕获异常的两种方式" class="headerlink" title="使用promise解决捕获异常的两种方式"></a>使用promise解决捕获异常的两种方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	//回这个promise实例</div><div class="line">	return new Promise(function(resolve, reject)&#123;</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//先读取文件一，再读取文件2，最后读取文件3</div><div class="line">//注意：通过 .then 指定的回调函数的时候，成功的回调函数必须传</div><div class="line">//读取文件1</div><div class="line">getFileByPath(&apos;./files/1.txt&apos;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件2</div><div class="line">		return getFileByPath(&apos;./files/2.txt&apos;);</div><div class="line">	&#125;, function(err) &#123;</div><div class="line">		//如果前面的promise执行失败，我们不想后续的Promise被终止，可以为每个Promise实例指定 失败回调</div><div class="line">		console.log(&apos;这是失败的结果：&apos; + err.message);</div><div class="line">		//读取文件2</div><div class="line">		return getFileByPath(&apos;./files/2.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件3</div><div class="line">		return getFileByPath(&apos;./filse/3.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<ol>
+<li>当我们有这样的需求：哪怕前面的执行失败了，但是不要影响后续的promise的正常执行，此时，我们可以单独为每个promise，通过 .then 指定一下失败的回调</li>
+<li>有时候，我们有这样的需求，和上面的需求刚好相反：如果后续的promise执行，依赖于前面的promise执行的结果，如果您前面的执行失败了，则后续的就没有必要执行下去，此时，我们想要实现，一旦有错，则立即终止所有的promise的执行。则<strong>不</strong>需要为任何一个 .then 指定失败的回调。可以通过<strong>catch </strong>的方法捕获异常</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">const fs = require(&apos;fs&apos;);</div><div class="line">//声明了一个 getFileByPath() 方法</div><div class="line">function getFileByPath(fpath) &#123;</div><div class="line">	//得到一个promise实例</div><div class="line">	//回这个promise实例</div><div class="line">	return new Promise(function(resolve, reject)&#123;</div><div class="line">		fs.readFile(&apos;./files/2.txt&apos;,&apos;utf-8&apos;,(err, dataStr) =&gt; &#123;</div><div class="line">			if(err) return reject(err);</div><div class="line">			resolve(dataStr);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">//先读取文件一，再读取文件2，最后读取文件3</div><div class="line"></div><div class="line">//读取文件1</div><div class="line">getFileByPath(&apos;./files/1.txt&apos;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件2</div><div class="line">		return getFileByPath(&apos;./files/2.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">		//读取文件3</div><div class="line">		return getFileByPath(&apos;./filse/3.txt&apos;);</div><div class="line">	&#125;)</div><div class="line">	.then(function (data) &#123;</div><div class="line">		console.log(data);</div><div class="line">	&#125;)</div><div class="line">	.catch(function (err) &#123;</div><div class="line">		console.log(&apos;这是自己的处理方式：&apos; + err.message);</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<p>catch的作用，如果前面有任何的promise 执行失败，则立即终止所有的promise执行，并马上进入 catch 去处理 promise 中跑出的异常。</p>
+<h2 id="jQuery中promise的使用"><a href="#jQuery中promise的使用" class="headerlink" title="jQuery中promise的使用"></a>jQuery中promise的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(function () &#123;</div><div class="line">	$(&apos;#btn&apos;).on(&apos;click&apos;, function ()&#123;</div><div class="line">		$.ajax(&#123;</div><div class="line">			url: &apos;./data.json&apos;,</div><div class="line">			type: &apos;get&apos;,</div><div class="line">			dataType: &apos;json&apos;</div><div class="line">		&#125;)</div><div class="line">			.then(function (data) &#123;</div><div class="line">				console.log(data);</div><div class="line">			&#125;)</div><div class="line">	&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/02/ES6转ES5工具babel的配置/" rel="next" title="ES6转ES5工具babel的配置">
+                <i class="fa fa-chevron-left"></i> ES6转ES5工具babel的配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/S.png"
+                alt="yatou" />
+            
+              <p class="site-author-name" itemprop="name">yatou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是promise"><span class="nav-number">1.</span> <span class="nav-text">什么是promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise的使用"><span class="nav-number">2.</span> <span class="nav-text">promise的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#【形式上】的异步操作"><span class="nav-number">2.1.</span> <span class="nav-text">【形式上】的异步操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是形式上的异步操作"><span class="nav-number">2.1.1.</span> <span class="nav-text">什么是形式上的异步操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【具体】的异步操作"><span class="nav-number">2.2.</span> <span class="nav-text">【具体】的异步操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过-then-指定成功和失败的回调"><span class="nav-number">2.3.</span> <span class="nav-text">通过.then()指定成功和失败的回调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Promise解决回调地狱"><span class="nav-number">2.4.</span> <span class="nav-text">使用Promise解决回调地狱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用promise解决捕获异常的两种方式"><span class="nav-number">2.5.</span> <span class="nav-text">使用promise解决捕获异常的两种方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery中promise的使用"><span class="nav-number">3.</span> <span class="nav-text">jQuery中promise的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yatou</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
