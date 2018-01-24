@@ -228,6 +228,194 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/css制作图标/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yatou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/S.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/24/css制作图标/" itemprop="url">CSS制作图标</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-24T11:49:17+08:00">
+                2018-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h2><p>利用设置border的transparent实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html部分 --&gt;</div><div class="line">&lt;div class=&quot;triangle triangle-top&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;triangle triangle-right&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;triangle triangle-bottom&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;triangle triangle-left&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.triangle&#123;</div><div class="line">		border: 10px solid transparent;</div><div class="line">		width: 0;</div><div class="line">		height: 0;</div><div class="line">	&#125;</div><div class="line">	.triangle-top&#123;</div><div class="line">		border-top-color: red;</div><div class="line">	&#125;</div><div class="line">	.triangle-right&#123;</div><div class="line">		border-right-color: red;</div><div class="line">	&#125;</div><div class="line">	.triangle-bottom&#123;</div><div class="line">		border-bottom-color: red;</div><div class="line">	&#125;</div><div class="line">	.triangle-left&#123;</div><div class="line">		border-left-color: red;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h2 id="绘制元素轮廓"><a href="#绘制元素轮廓" class="headerlink" title="绘制元素轮廓"></a>绘制元素轮廓</h2><blockquote>
+<p>利用一个和border很像的属性outline来实现，且不占空间</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;box&quot;&gt;outline&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.box&#123;</div><div class="line">		width: 100px;</div><div class="line">		height: 100px;</div><div class="line">		line-height: 100px;</div><div class="line">		text-align: center;</div><div class="line">		background-color: red;</div><div class="line">		border: 5px solid #dedede;</div><div class="line">		border-radius: 50%;</div><div class="line">		/* border-radius 只作用于border */</div><div class="line">	&#125;</div><div class="line">	/* 由于outline不占空间的特性，outline 可以很好的解决添加边框时抖动问题 */</div><div class="line">	.box:hover&#123;</div><div class="line">		outline: 5px solid #dedede;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/outline-1.jpg" alt="Alt triangle"></p>
+<blockquote>
+<p>利用box-sizing: border-box;也可以实现不占据位置的边款，同时border-radius也起作用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;one&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.one&#123;</div><div class="line">		width: 100px;</div><div class="line">      	height: 100px;</div><div class="line">      	line-height: 100px;</div><div class="line">      	text-align: center;</div><div class="line">      	border: 10px solid #dedede;</div><div class="line">      	border-radius: 10px;</div><div class="line">      	box-sizing: border-box;</div><div class="line">      	background-color: orange;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/boxSizing.jpg" alt="Alt box-sizing"></p>
+<blockquote>
+<p>利用box-shadow也可以实现：不占据位置的边款，同时border-radius也起作用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;boxShadow&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    line-height: 100px;</div><div class="line">    text-align: center;</div><div class="line">    background-color: red;</div><div class="line">    box-shadow: 0 0 0 10px #d8505c;</div><div class="line">    /* box-shadow: x轴偏移 y轴偏移 阴影大小 边款大小 阴影颜色 */</div><div class="line">    border-radius: 10px;</div><div class="line">    margin: 10px;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/boxShadow.jpg" alt="Alt box-shadow"></p>
+<h2 id="绘制平行四边形"><a href="#绘制平行四边形" class="headerlink" title="绘制平行四边形"></a>绘制平行四边形</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;parallelogram&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.parallelogram&#123;</div><div class="line">		background-color: #ccc;</div><div class="line">      	height: 100px;</div><div class="line">      	width: 100px;</div><div class="line">      	transform: skew(-25deg);</div><div class="line">      	margin-left: 100px;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/paralelogram.jpg" alt="Alt parallelogram"></p>
+<h2 id="绘制暂停按钮"><a href="#绘制暂停按钮" class="headerlink" title="绘制暂停按钮"></a>绘制暂停按钮</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;pause&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;pause pausejia&quot;&gt;&lt;/div&gt;</div><div class="line"> 	&lt;div class=&quot;pause pausexie&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.pause&#123;</div><div class="line">		width: 50px;</div><div class="line">      	height: 50px;</div><div class="line">      	color: #000;</div><div class="line">      	border: 1px solid #000;</div><div class="line">      	border-radius: 50%;</div><div class="line">      	cursor: pointer;</div><div class="line">      	outline: 10px solid #011;</div><div class="line">      	outline-offset: -26px;</div><div class="line">	&#125;</div><div class="line">	.pausejia&#123;</div><div class="line">      	outline-offset: -35px;</div><div class="line">    &#125;</div><div class="line">	.pausexie&#123;</div><div class="line">        outline-offset: -35px;</div><div class="line">      	transform: rotate(45deg);</div><div class="line">    &#125;</div><div class="line">    .echelon&#123;</div><div class="line">      	width: 35px;</div><div class="line">      	border: 50px solid transparent;</div><div class="line">      	border-bottom: 50px solid red;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/outline-3.jpg" alt="Alt pause"><br><img src="/imgs/outline-2.jpg" alt="Alt pause"><br><img src="/imgs/outline-4.jpg" alt="Alt pause"></p>
+<h2 id="绘制梯形图标"><a href="#绘制梯形图标" class="headerlink" title="绘制梯形图标"></a>绘制梯形图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;echelon&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.echelon&#123;</div><div class="line">      	width: 35px;</div><div class="line">      	border: 50px solid transparent;</div><div class="line">      	border-bottom: 50px solid red;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/tixing.jpg" alt="Alt pause"></p>
+<h2 id="绘制鹰嘴图标"><a href="#绘制鹰嘴图标" class="headerlink" title="绘制鹰嘴图标"></a>绘制鹰嘴图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;olecranon&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.olecranon&#123;</div><div class="line">		width: 35px;</div><div class="line">     		border-top: 50px solid transparent;</div><div class="line">     		border-right: 22px solid #096;</div><div class="line">     		border-bottom-right-radius: 100%;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/鹰嘴.jpg" alt="Alt pause"></p>
+<h2 id="绘制左右箭头图标"><a href="#绘制左右箭头图标" class="headerlink" title="绘制左右箭头图标"></a>绘制左右箭头图标</h2><blockquote>
+<p>利用box-reflect实现倒影<br>-webkit-box-reflect：none | <direction> <offset>? <mask-box-image>? ;<br>box-reflect：none | <direction> <offset>? <mask-box-image>?;<br>其中<direction>：此值表示生成的倒影的方向，主要包括以下值：</direction></mask-box-image></offset></direction></mask-box-image></offset></direction></p>
+<ul>
+<li>above: 表示生成的倒影在对象（原图）的上方；</li>
+<li>below: 表示生成的倒影在对象（原图）的下方；</li>
+<li>left: 表示生成的倒影在对象（原图）的左方；</li>
+<li>right: 表示生成的倒影在对象（原图）的右方；<br>其中<offset>：此值是表示设置生成的倒影与原图的间距。可以是具体的长度值或者百分比，可以为负值<br>其中<mask-box-image>：用来设置倒影的遮罩效果，可以使背景图片，也可以是渐变生成的背景图像。例如：</mask-box-image></offset></li>
+<li>经向渐变效果：<br>-webkit-box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));<br>box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));</li>
+<li>背景图：</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">	.box-reflect img &#123;</div><div class="line">		-webkit-box-reflect: below 0 url(http://cdn.w3cplus.com/sites/default/files/blogs/2014/1405/css-masking.png); </div><div class="line">		box-reflect: below 0 url(http://cdn.w3cplus.com/sites/default/files/blogs/2014/1405/css-masking.png);</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://www.w3cplus.com/css3/css3-box-reflect.html" target="_blank" rel="external">Reflect</a><br>值得注意的是，box-reflect属性具有兼容性问题，只能在Chrome浏览器中打开。</p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;lrarrow&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.lrarrow&#123;</div><div class="line">       	width: 0;</div><div class="line">       	height: 0;</div><div class="line">       	border: 10px solid transparent;</div><div class="line">       	border-left-color: red;</div><div class="line">       	-webkit-box-reflect: left 5px;</div><div class="line">       	box-reflect: left 5px;</div><div class="line">       	margin-left: 100px;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/lrarrow.jpg" alt="Alt pause"></p>
+<h2 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=&quot;download&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- css --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.download&#123;</div><div class="line">      	width: 0;</div><div class="line">      	color: blue;</div><div class="line">      	border: 8px solid transparent;</div><div class="line">      	border-top-color: blue;</div><div class="line">      	box-shadow: 0 -12px 0 -4px;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>实现效果如下：</p>
+</blockquote>
+<p><img src="/imgs/dw.jpg" alt="Alt pause"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -670,7 +858,7 @@
 <h3 id="方式2："><a href="#方式2：" class="headerlink" title="方式2："></a>方式2：</h3><ol>
 <li>修改<code>webpack.config.js</code>文件，新增devServer 节点</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">derServer:&#123;</div><div class="line">	hot: true,</div><div class="line">	open: true,</div><div class="line">	port: 3000</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">derServer:&#123;</div><div class="line">	hot: true,</div><div class="line">	open: true,</div><div class="line">	port: 3000,</div><div class="line">	contentBase: &apos;./&apos;,</div><div class="line">	host: &apos;127.0.0.1&apos;,</div><div class="line">	colors: true,//终端输出结果为彩色</div><div class="line">	//histroyApiFallback: true//不跳转</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>
 <li>在main.js文件中引入webpack模块</li>
 </ol>
@@ -1899,137 +2087,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yatou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/S.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/25/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-25T22:50:08+08:00">
-                2017-08-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2077,7 +2141,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -2120,7 +2184,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

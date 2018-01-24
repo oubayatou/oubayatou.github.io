@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/01/webpack的配置/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；  webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上述的">
-<meta property="og:updated_time" content="2017-11-02T09:38:32.319Z">
+<meta property="og:updated_time" content="2018-01-08T06:55:15.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack的配置">
 <meta name="twitter:description" content="网页中引入的静态资源多了以后有什么问题？？？  网页加载速度慢， 因为 我们要发起很多的二次请求； 要处理错综复杂的依赖关系如何解决上述两个问题 合并、压缩、精灵图、图片的Base64编码 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；  webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；如何完美实现上述的">
@@ -359,7 +359,7 @@
 <h3 id="方式2："><a href="#方式2：" class="headerlink" title="方式2："></a>方式2：</h3><ol>
 <li>修改<code>webpack.config.js</code>文件，新增devServer 节点</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">derServer:&#123;</div><div class="line">	hot: true,</div><div class="line">	open: true,</div><div class="line">	port: 3000</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">derServer:&#123;</div><div class="line">	hot: true,</div><div class="line">	open: true,</div><div class="line">	port: 3000,</div><div class="line">	contentBase: &apos;./&apos;,</div><div class="line">	host: &apos;127.0.0.1&apos;,</div><div class="line">	colors: true,//终端输出结果为彩色</div><div class="line">	//histroyApiFallback: true//不跳转</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>
 <li>在main.js文件中引入webpack模块</li>
 </ol>
@@ -512,7 +512,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -571,7 +571,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
